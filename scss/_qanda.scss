@@ -1,0 +1,218 @@
+@use "index";
+@use "mixin" as m;
+
+/************************************************************/
+/**************************************************** QandA */
+/************************************************************/
+@include m.mq(sp) {
+    .qanda {
+        width: 100%;
+        padding: index.$spc-l index.$spc-m index.$spc-xl;
+        background: index.$acc-ngray-09;
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-m;
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: index.$spc-m;
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    gap: index.$spc-xs;
+                    padding: index.$spc-xs;
+                    background: rgba(index.$acc-ngray-07, 0.5);
+                    border-radius: 8px;
+                    .qanda_question {
+                        display: flex;
+                        align-items: center;
+                        gap: index.$spc-s;
+                        background: white;
+                        padding: index.$spc-s;
+                        border-radius: 4px;
+                        .drop-cap {
+                            font-family: 'Rubik', sans-serif;
+                            font-weight: 600;
+                            font-size: index.$fs-5xl;
+                            line-height: 1;
+                            color: index.$acc-blue;
+                        }
+                        .body {
+                            font-size: index.$fs-m;
+                            text-align: justify;
+                            line-height: index.$lh-m;
+                        }
+                    }
+                    .qanda_answer {
+                        display: flex;
+                        align-items: flex-start;
+                        gap: index.$spc-s;
+                        background: white;
+                        padding: index.$spc-s;
+                        border-radius: 4px;
+                        .drop-cap {
+                            font-family: 'Rubik', sans-serif;
+                            font-weight: 600;
+                            font-size: index.$fs-5xl;
+                            line-height: 1;
+                            color: index.$r-beniaka;
+                        }
+                        .body {
+                            font-size: index.$fs-m;
+                            text-align: justify;
+                            line-height: index.$lh-m;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(tab) {
+    .qanda {
+        width: 100%;
+        padding: index.$spc-xl 0 index.$spc-2xl;
+        &_wrapper {
+            max-width: index.$maxvw-xl;
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-m;
+            margin: auto;
+            padding: 0 index.$spc-l;
+            ul {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: index.$spc-m;
+                margin: index.$spc-m auto 0;
+                li {
+                    max-width: calc((100% - 20px) / 2);
+                    display: flex;
+                    flex-direction: column;
+                    gap: index.$spc-xs;
+                    padding: index.$spc-s;
+                    background: rgba(index.$acc-ngray-07, 0.5);
+                    border-radius: 16px;
+                    .qanda_question {
+                        display: flex;
+                        align-items: center;
+                        gap: index.$spc-s;
+                        padding: index.$spc-m;
+                        background: white;
+                        border-radius: 4px;
+                        min-height: 100px;
+                        .drop-cap {
+                            font-family: 'Rubik', sans-serif;
+                            font-weight: 600;
+                            font-size: index.$fs-5xl;
+                            line-height: 1;
+                            color: index.$acc-blue;
+                        }
+                        .body {
+                            font-size: index.$fs-m;
+                            text-align: justify;
+                            line-height: index.$lh-m;
+                        }
+                    }
+                    .qanda_answer {
+                        display: flex;
+                        align-items: flex-start;
+                        gap: index.$spc-s;
+                        padding: index.$spc-m;
+                        background: white;
+                        border-radius: 4px;
+                        height: 100%;
+                        .drop-cap {
+                            font-family: 'Rubik', sans-serif;
+                            font-weight: 600;
+                            font-size: index.$fs-5xl;
+                            line-height: 1;
+                            color: index.$r-beniaka;
+                        }
+                        .body {
+                            font-size: index.$fs-m;
+                            text-align: justify;
+                            line-height: index.$lh-m;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(pc) {
+    .qanda {
+        width: 100%;
+        padding: index.$spc-xl 0 index.$spc-2xl;
+        &_wrapper {
+            max-width: index.$maxvw-xl;
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-m;
+            margin: auto;
+            ul {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: index.$spc-m;
+                margin: index.$spc-m auto 0;
+                li {
+                    max-width: calc((100% - 20px) / 2);
+                    display: flex;
+                    flex-direction: column;
+                    gap: index.$spc-xs;
+                    padding: index.$spc-s;
+                    background: rgba(index.$acc-ngray-07, 0.5);
+                    border-radius: 16px;
+                    .qanda_question {
+                        display: flex;
+                        align-items: center;
+                        gap: index.$spc-s;
+                        padding: index.$spc-m;
+                        background: white;
+                        border-radius: 4px;
+                        min-height: 100px;
+                        .drop-cap {
+                            font-family: 'Rubik', sans-serif;
+                            font-weight: 600;
+                            font-size: index.$fs-5xl;
+                            line-height: 1;
+                            color: index.$acc-blue;
+                        }
+                        .body {
+                            font-size: index.$fs-m;
+                            text-align: justify;
+                            line-height: index.$lh-m;
+                        }
+                    }
+                    .qanda_answer {
+                        display: flex;
+                        align-items: flex-start;
+                        gap: index.$spc-s;
+                        padding: index.$spc-m;
+                        background: white;
+                        border-radius: 4px;
+                        height: 100%;
+                        .drop-cap {
+                            font-family: 'Rubik', sans-serif;
+                            font-weight: 600;
+                            font-size: index.$fs-5xl;
+                            line-height: 1;
+                            color: index.$r-beniaka;
+                        }
+                        .body {
+                            font-size: index.$fs-m;
+                            text-align: justify;
+                            line-height: index.$lh-m;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

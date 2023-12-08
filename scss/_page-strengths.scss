@@ -1,0 +1,185 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/******************************************* page-strengths */
+/************************************************************/
+.page-strengths {
+    &_top {
+        position: relative;
+        background: index.$keycolor-cream;
+        display: grid;
+        place-items: center;
+        width: 100vw;
+        min-height: 100vw;
+        left: 0;
+        z-index: -1;
+        padding-top: 50px;
+        .top-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: index.$spc-m;
+            h1 {
+                line-height: index.$lh-xs;
+                font-size: index.$fs-2xl;
+                text-align: center;
+            }
+            h2 {
+                font-size: index.$fs-xl;
+                text-align: center;
+            }
+            h3 {
+                font-size: index.$fs-l;
+                text-align: center;
+            }
+            &-logo {
+                width: 120px;
+                margin: index.$spc-xl 0 0;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .page_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: index.$spc-l;
+        position: relative;
+        .page_intro {
+            display: flex;
+            flex-direction: column;
+            padding: index.$spc-l;
+            gap: index.$spc-l;
+            .page-heading-02 {
+                text-align: center;
+                line-height: index.$lh-s;
+                @include m.break-sentence;
+            }
+            .page-heading-03 {
+                text-align: center;
+                line-height: index.$lh-s;
+                @include m.break-sentence;
+            }
+            .page-heading-04 {
+                text-align: center;
+                line-height: index.$lh-s;
+                @include m.break-sentence;
+            }
+            .strengths_graph {
+                margin: auto;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .page_flow {
+            background: index.$keycolor-cream;
+            padding: index.$spc-l;
+            .page_flowlist {
+                display: flex;
+                flex-direction: column;
+                gap: index.$spc-m;
+                padding: index.$spc-l 0;
+                &-item {
+                    display: flex;
+                    flex-direction: row;
+                    gap: index.$spc-xs;
+                    figure {
+                        display: grid;
+                        place-items: center;
+                        flex: 1;
+                        aspect-ratio: 8 / 5;
+                        background: gray;
+                        height: fit-content;
+                        overflow: hidden;
+                        img {
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    p {
+                        flex: 1;
+                        font-size: index.$fs-s;
+                        line-height: index.$lh-s;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+    }
+}
+.strengths_footer {
+    padding: index.$spc-2xl index.$spc-l;
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: index.$spc-l;
+        position: relative;
+       .strengths_footer-title {
+            font-size: index.$fs-xl;
+            text-align: center;
+        }
+        .strengths_summary {
+            p {
+                text-align: center;
+                line-height: index.$lh-s;
+                padding: index.$spc-m;
+                @include m.break-sentence;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: index.$spc-s;
+                li {
+                    font-weight: 600;
+                }
+            }
+        }
+        .strengths_bnrlist {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-m;
+            &-item {
+                background: index.$keycolor-cream;
+                border: solid 1px index.$keycolor-greishyellow;
+                border-radius: 8px;
+                filter: drop-shadow(2px 2px 2px rgba(index.$b-hisoku,0.4));
+                &.current {
+                    opacity: 0.5;
+                }
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    gap: index.$spc-s;
+                    padding: index.$spc-m index.$spc-l;
+                    border-radius: 8px;
+                    h4 {
+                        font-weight: 600;
+                        font-size: index.$fs-s;
+                    }
+                    dl {
+                        display: flex;
+                        flex-direction: column;
+                        gap: index.$spc-m;
+                        dt {
+                            font-weight: 600;
+                            font-size: index.$fs-xl;
+                            line-height: index.$lh-xs;
+                            text-align: center;
+                        }
+                        dd {
+                            font-weight: 600;
+                            padding: 5px;
+                            background: index.$white;
+                            text-align: center;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

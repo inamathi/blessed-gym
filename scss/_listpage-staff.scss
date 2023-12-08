@@ -1,0 +1,231 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/************************************************* listpage */
+/************************************************************/
+@include m.mq(sp) {
+    .listpage-staff {
+        &_title {
+            display: flex;
+            flex-direction: column;
+            font-size: index.$fs-xl;
+            padding-bottom: 5px;
+            line-height: 1.6;
+            border-bottom: dotted 1px index.$b-usuhanada;
+            span{
+                display: inline-block;
+                position: relative;
+                font-size: index.$fs-m;
+                font-family: 'Rubik', sans-serif;
+                font-weight: 500;
+                background: index.$acc-liteblue;
+                border-radius: 4px;
+                padding: 4px 10px;
+                margin-bottom: 5px;
+            }
+        }
+        &_itemlist {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: index.$spc-xl;
+            margin-top: index.$spc-l;
+            &-item {
+                transition: all ease 0.3s;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                & > div {
+                    flex: 1;
+                    .thumbnail {
+                    }
+                    .profile {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        margin-top: 10px;
+                        .subtitle {
+                            font-size: index.$fs-s;
+                                    font-weight: bold;
+                                    color: index.$acc-dwgray-00;
+                                    background: none;
+                        }
+                        .name {
+                            font-size: index.$fs-l;
+                            font-weight: bold;
+                            line-height: 1;
+                        }
+                        .name-en {
+                            font-size: index.$fs-s;
+                            font-weight: normal;
+                            color: index.$b-usuhanada;
+                            line-height: 1;
+                        }
+                        .memo {
+                            color: index.$acc-dwgray-00;
+                            font-size: index.$fs-xs;
+                            line-height: 1.75;
+                        }
+                    }
+                    .comment {
+                        color: index.$acc-dwgray-00;
+                        font-size: index.$fs-s;
+                        line-height: 1.75;
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(tab) {
+    .listpage-staff {
+        &_title {
+            font-size: index.$fs-2xl;
+            padding-bottom: index.$spc-xs;
+            line-height: 1.6;
+            border-bottom: dotted 1px index.$b-usuhanada;
+            span{
+                position: relative;
+                top: -4px;
+                font-size: index.$fs-l;
+                font-family: 'Rubik', sans-serif;
+                font-weight: 500;
+                margin-right: 10px;
+                background: index.$acc-liteblue;
+                padding: 4px 10px;
+                border-radius: 4px;
+                &.archive {
+                    font-size: index.$fs-s;
+                }
+            }
+        }
+        &_itemlist {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: index.$spc-l;
+            margin-top: index.$spc-l;
+            &-item {
+                transition: all ease 0.3s;
+                display: flex;
+                flex-direction: column;
+                gap: index.$spc-m;
+                padding: index.$spc-m;
+                & > div {
+                    flex: 1;
+                    .thumbnail {
+                    }
+                    .profile {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        margin-top: 10px;
+                        .subtitle {
+                            font-size: index.$fs-s;
+                                    font-weight: bold;
+                                    color: index.$acc-dwgray-00;
+                                    background: none;
+                        }
+                        .name {
+                            font-size: index.$fs-l;
+                            font-weight: bold;
+                            line-height: 1;
+                        }
+                        .name-en {
+                            font-size: index.$fs-s;
+                            font-weight: normal;
+                            color: index.$b-usuhanada;
+                            line-height: 1;
+                        }
+                        .memo {
+                            color: index.$acc-dwgray-00;
+                            font-size: index.$fs-xs;
+                            line-height: 1.75;
+                        }
+                    }
+                    .comment {
+                        color: index.$acc-dwgray-00;
+                        font-size: index.$fs-s;
+                        line-height: 1.75;
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(pc) {
+    .listpage-staff {
+        &_title {
+            font-size: index.$fs-2xl;
+            padding-bottom: index.$spc-xs;
+            line-height: 1.6;
+            border-bottom: dotted 1px index.$b-usuhanada;
+            span{
+                position: relative;
+                top: -4px;
+                font-size: index.$fs-l;
+                font-family: 'Rubik', sans-serif;
+                font-weight: 500;
+                margin-right: 10px;
+                background: index.$acc-liteblue;
+                padding: 4px 10px;
+                border-radius: 4px;
+                &.archive {
+                    font-size: index.$fs-s;
+                }
+            }
+        }
+        &_itemlist {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: index.$spc-l;
+            margin-top: index.$spc-l;
+            &-item {
+                transition: all ease 0.3s;
+                display: flex;
+                flex-direction: row;
+                gap: index.$spc-m;
+                padding: index.$spc-m;
+                & > div {
+                    flex: 1;
+                    .thumbnail {
+                    }
+                    .profile {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        margin-top: 10px;
+                        .subtitle {
+                            font-size: index.$fs-s;
+                                    font-weight: bold;
+                                    color: index.$acc-dwgray-00;
+                                    background: none;
+                        }
+                        .name {
+                            font-size: index.$fs-l;
+                            font-weight: bold;
+                            line-height: 1;
+                        }
+                        .name-en {
+                            font-size: index.$fs-s;
+                            font-weight: normal;
+                            color: index.$b-usuhanada;
+                            line-height: 1;
+                        }
+                        .memo {
+                            color: index.$acc-dwgray-00;
+                            font-size: index.$fs-xs;
+                            line-height: 1.75;
+                        }
+                    }
+                    .comment {
+                        color: index.$acc-dwgray-00;
+                        font-size: index.$fs-s;
+                        line-height: 1.75;
+                    }
+                }
+            }
+        }
+    }
+}

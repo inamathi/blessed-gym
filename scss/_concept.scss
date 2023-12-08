@@ -1,0 +1,218 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/************************************************** concept */
+/************************************************************/
+@include m.mq(sp) {
+    .concept {
+        width: 100%;
+        background: rgba(index.$white, 0.1);
+        background-blend-mode: multiply;
+        padding-top: index.$spc-l;
+        padding-bottom: index.$spc-l;
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-s;
+            padding: index.$spc-l;
+            .concept_body {
+                display: flex;
+                flex-direction: column;
+                gap: index.$spc-l;
+                &-catch {
+                    font-size: index.$fs-xl;
+                    line-height: index.$lh-s;
+                    text-align: center;
+                    @include m.break-sentence;
+                }
+                &-lead {
+                    display: flex;
+                    flex-direction: column;
+                    gap: index.$spc-l;
+                    li {
+                        font-weight: bold;
+                        font-size: index.$fs-l;
+                        line-height: index.$lh-s;
+                        text-align: center;
+                        background: index.$white;
+                        padding: 15px 0 10px;
+                        border-radius: 8px;
+                        border: solid 1px index.$b-hisoku;
+                        color: index.$b-kachikaeshi;
+                        @include m.break-sentence;
+                        @include m.gener_shadow;
+                    }
+                }
+                &-summary {
+                    p {
+                        line-height: index.$lh-m;
+                        font-size: index.$fs-s;
+                        text-align: center;
+                        @include m.break-sentence;
+                    }
+                    h3 {
+                        font-weight: bold;
+                        font-size: index.$fs-l;
+                        line-height: index.$lh-m;
+                        border: solid 1px index.$zouge;
+                        border-radius: 8px;
+                        background: index.$white;
+                        padding: index.$spc-s;
+                        margin: index.$spc-l auto;
+                        text-align: center;
+                        border: solid 1px index.$b-hisoku;
+                        border-radius: 8px;
+                        @include m.break-sentence;
+                        @include m.gener_shadow;
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(tab) {
+    .concept {
+        width: 100%;
+        background: rgba(index.$white, 0.1);
+        background-blend-mode: multiply;
+        padding-top: index.$spc-l;
+        padding-bottom: index.$spc-l;
+        width: 100%;
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-s;
+            padding: index.$spc-l;
+            max-width: index.$maxvw-xxl;
+            width: 100%;
+            margin: auto;
+            .concept_body {
+                display: flex;
+                flex-direction: column;
+                gap: index.$spc-l;
+                &-catch {
+                    font-size: index.$fs-xl;
+                    line-height: index.$lh-s;
+                    text-align: center;
+                    @include m.break-sentence;
+                }
+                &-lead {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                    gap: index.$spc-l;
+                    li {
+                        display: grid;
+                        place-items: center;
+                        font-weight: bold;
+                        font-size: index.$fs-l;
+                        line-height: index.$lh-s;
+                        text-align: center;
+                        background: index.$white;
+                        padding: 15px 0 10px;
+                        border-radius: 8px;
+                        border: solid 1px index.$b-hisoku;
+                        color: index.$b-kachikaeshi;
+                        @include m.break-sentence;
+                        @include m.gener_shadow;
+                    }
+                }
+                &-summary {
+                    p {
+                        line-height: index.$lh-m;
+                        font-size: index.$fs-l;
+                        text-align: center;
+                        @include m.break-sentence;
+                    }
+                    h3 {
+                        font-weight: bold;
+                        font-size: index.$fs-l;
+                        line-height: index.$lh-m;
+                        border: solid 1px index.$zouge;
+                        border-radius: 8px;
+                        background: index.$white;
+                        padding: index.$spc-s;
+                        margin: index.$spc-l auto;
+                        text-align: center;
+                        border: solid 1px index.$b-hisoku;
+                        border-radius: 8px;
+                        @include m.break-sentence;
+                        @include m.gener_shadow;
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(pc) {
+    .concept {
+        width: 100%;
+        background: rgba(index.$white, 0.1);
+        background-blend-mode: multiply;
+        padding-top: index.$spc-l;
+        padding-bottom: index.$spc-l;
+        width: 100%;
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-s;
+            padding: index.$spc-l;
+            max-width: index.$maxvw-xxl;
+            width: 100%;
+            margin: auto;
+            .concept_body {
+                display: flex;
+                flex-direction: column;
+                gap: index.$spc-l;
+                &-catch {
+                    font-size: index.$fs-xl;
+                    line-height: index.$lh-s;
+                    text-align: center;
+                    @include m.break-sentence;
+                }
+                &-lead {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                    gap: index.$spc-l;
+                    li {
+                        display: grid;
+                        place-items: center;
+                        font-weight: bold;
+                        font-size: index.$fs-l;
+                        line-height: index.$lh-s;
+                        text-align: center;
+                        background: index.$white;
+                        padding: 15px 0 10px;
+                        border-radius: 8px;
+                        border: solid 1px index.$b-hisoku;
+                        color: index.$b-kachikaeshi;
+                        @include m.break-sentence;
+                        @include m.gener_shadow;
+                    }
+                }
+                &-summary {
+                    p {
+                        line-height: index.$lh-m;
+                        font-size: index.$fs-l;
+                        text-align: center;
+                        @include m.break-sentence;
+                    }
+                    h3 {
+                        font-weight: bold;
+                        font-size: index.$fs-l;
+                        line-height: index.$lh-m;
+                        border: solid 1px index.$zouge;
+                        border-radius: 8px;
+                        background: index.$white;
+                        padding: index.$spc-s;
+                        margin: index.$spc-l auto;
+                        text-align: center;
+                        border: solid 1px index.$b-hisoku;
+                        border-radius: 8px;
+                        @include m.break-sentence;
+                        @include m.gener_shadow;
+                    }
+                }
+            }
+        }
+    }
+}

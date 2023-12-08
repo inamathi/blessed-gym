@@ -1,0 +1,195 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/***************************************************** form */
+/************************************************************/
+.form {
+    width: 100%;
+    padding: index.$spc-l 0 index.$spc-xl;
+    background: index.$keycolor-cream;
+    &_wrapper {
+        width: 100%;
+        max-width: index.$maxvw-m;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: index.$spc-l;
+        .init {
+            display: flex;
+            flex-direction: column;
+            .form-label {
+                margin-bottom: 5px;
+                p {
+                    display: flex;
+                    gap: 10px;
+                    .label-ja {
+                        font-size: index.$fs-s;
+                    }
+                    .label-en {
+                        font-size: index.$fs-s;
+                        color: index.$y-uguisucha;
+                    }
+                    .require {
+                        font-size: index.$fs-s;
+                        color: index.$r-beniaka;
+                    }
+                }
+            }
+        }
+        .form_lead {
+            font-size: index.$fs-m;
+            line-height: 1.75;
+            text-align: center;
+            span {
+                display: block;
+                font-size: index.$fs-s;
+                margin-top: index.$spc-s;
+                color: index.$r-beniaka;
+            }
+        }
+    }
+.wpcf7-list-item-label {
+    font-size: index.$fs-m;
+}
+
+}
+.wpcf7-form-control-wrap {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        padding: 8px 16px;
+        border-radius: 4px;
+        font-size: index.$fs-m;
+        height: calc(1rem + 8px);
+        background: index.$white;
+        border: solid 1px index.$yb-wakana;
+        height: 44px;
+        width: 100%;
+        &:focus {
+            border: solid 2px rgba(index.$acc-blue, 1);
+            background: rgba(white, 1);
+        }
+    }
+    input[type="radio"] {
+        position: relative;
+        top: 2px;
+        width: 16px;
+        height: 16px;
+        background: rgba(index.$acc-usuzumi, 0.3);
+        border: solid 2px rgba(index.$acc-usuzumi, 0.3);
+        border-radius: 50%;
+        &:checked {
+            background: index.$acc-blue;
+            border: solid 2px darken(index.$acc-blue, 15%);
+        }
+    }
+    textarea {
+        padding: 8px 16px;
+        border-radius: 4px;
+        font-size: index.$fs-m;
+        line-height: 1.6;
+        height: calc(1rem + 8px);
+        background: index.$white;
+        border: solid 1px index.$yb-wakana;
+        width: 100%;
+        height: 200px;
+        resize:vertical;
+        &:focus {
+            border: solid 2px rgba(index.$acc-blue, 1);
+            background: rgba(white, 1);
+        }
+    }
+}
+// 送信ボタン
+.wpcf7-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 44px;
+    margin: index.$spc-m auto;
+    background: index.$b-conpeki;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 2px rgba(index.$y-uguisucha,0.5));
+    &:hover {
+        background: lighten(index.$b-conpeki, 15%);
+    }
+    &:active {
+        background: darken(index.$b-conpeki, 15%);
+        color: darken(white, 15%);
+        filter: drop-shadow(2px 2px 2px rgba(index.$y-uguisucha,0.0));
+    }
+}
+// バリデーションアラート
+.wpcf7-not-valid-tip {
+    font-size: index.$fs-s;
+    margin-top: 10px;
+}
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+    background: white;
+    border: solid 2px index.$acc-liteorange;
+    padding: index.$spc-m;
+    text-align: center;
+}
+// 送信成功
+.wpcf7 form.sent .wpcf7-response-output {
+    background: white;
+    border: solid 2px index.$acc-blue;
+    padding: index.$spc-m;
+    text-align: center;
+    border-radius: 4px;
+    line-height: index.$lh-s;
+}
+
+
+@include m.mq(pc) {
+    // 送信ボタン
+    .wpcf7-submit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 44px;
+        margin: index.$spc-m auto;
+        background: index.$acc-blue;
+        border-radius: 8px;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        &:hover {
+            background: lighten(index.$acc-blue, 15%);
+        }
+        &:active {
+            background: darken(index.$acc-blue, 15%);
+            color: darken(white, 15%);
+        }
+    }
+    // バリデーションアラート
+    .wpcf7-not-valid-tip {
+        font-size: index.$fs-s;
+        margin-top: 10px;
+    }
+    .wpcf7 form.invalid .wpcf7-response-output,
+    .wpcf7 form.unaccepted .wpcf7-response-output,
+    .wpcf7 form.payment-required .wpcf7-response-output {
+        background: white;
+        border: solid 2px index.$acc-liteorange;
+        padding: index.$spc-m;
+        text-align: center;
+    }
+    // 送信成功
+    .wpcf7 form.sent .wpcf7-response-output {
+        background: white;
+        border: solid 2px index.$acc-blue;
+        padding: index.$spc-m;
+        text-align: center;
+        border-radius: 4px;
+    }
+
+}

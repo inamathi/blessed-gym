@@ -1,0 +1,53 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/*************************************************** swiper */
+/************************************************************/
+@include m.mq(sp) {
+    .swiper {
+        width: 100%;
+        .swiper-wrapper {
+            width: 80%;
+            .swiper-slide {
+                width: 100%;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+@include m.mq(tab) {
+    .swiper {
+        width: 100%;
+        .swiper-wrapper {
+            width: 80%;
+            .swiper-slide {
+                width: 100%;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+@include m.mq(pc) {
+    .swiper {
+        width: 100%;
+        background: index.$black;
+        margin: auto;
+        .swiper-wrapper {
+            max-width: index.$maxvw-xxl;
+            margin: auto;
+            .swiper-slide {
+                width: 100%;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

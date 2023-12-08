@@ -1,0 +1,135 @@
+@use "index";
+@use "mixin" as m;
+
+
+/* ===============================================
+# アコーディオン
+=============================================== */
+.faqAccordion {
+    display: flex;
+    flex-direction: column;
+    gap: index.$spc-m;
+    width: 100%;
+    margin: 0 auto;
+    &_header {
+        cursor: pointer;
+        color: white;
+        font-weight: bold;
+        position: relative;
+        padding: index.$spc-xs index.$spc-m;
+        border: solid 1px index.$b-hisoku;
+        border-radius: 4px;
+        background: index.$white;
+        color: index.$b-kachikaeshi;
+        font-size: index.$fs-m;
+        line-height: index.$lh-s;
+        filter: drop-shadow(2px 2px 2px rgba(index.$b-hisoku,0.4));
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 15px;
+            height: 2px;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+        }
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 2px;
+            height: 15px;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            right: 21px;
+            transform: translateY(-50%);
+        }
+        &.is-active::before {
+            transform: translateY(-50%) rotate(90deg);
+        }
+        &.is-active {
+            filter: drop-shadow(2px 2px 2px rgba(index.$b-hisoku,0.0));
+            border: dotted 1px index.$b-hisoku;
+            background: rgba(index.$b-hisoku, 0.2);
+        }
+    }
+    &_content {
+        overflow: hidden;
+        &-inner {
+            font-size: index.$fs-m;
+            font-weight: 400;
+            line-height: index.$lh-s;
+            padding: index.$spc-xs index.$spc-m;
+            @include m.justify;
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: index.$spc-s;
+                margin-left: index.$spc-l;
+                position: relative;
+                li {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    &::before {
+                        content: '';
+                        display: block;
+                        position: relative;
+                        left: -10px;
+                        top: -50%;
+                        width: 6px;
+                        height: 6px;
+                        background: rgba(index.$b-hisoku, 0.7);
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+/************************************************************/
+/**************************************************** QandA */
+/************************************************************/
+@include m.mq(sp) {
+    .inquiry {
+        width: 100%;
+        padding: index.$spc-l 0 index.$spc-xl;
+        background: rgba(index.$keycolor-litegray, 0.5);
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-m;
+            padding: index.$spc-l;
+        }
+    }
+}
+@include m.mq(tab) {
+    .inquiry {
+        width: 100%;
+        padding: index.$spc-l 0 index.$spc-xl;
+        background: rgba(index.$keycolor-litegray, 0.5);
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-m;
+            padding: index.$spc-l;
+        }
+    }
+}
+@include m.mq(pc) {
+    .inquiry {
+        width: 100%;
+        padding: index.$spc-l 0 index.$spc-xl;
+        background: rgba(index.$keycolor-litegray, 0.5);
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-m;
+            padding: index.$spc-l;
+            max-width: index.$maxvw-m;
+            margin: auto;
+        }
+    }
+}

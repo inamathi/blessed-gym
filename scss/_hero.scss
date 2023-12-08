@@ -1,0 +1,173 @@
+@use "index";
+@use "mixin" as m;
+
+/************************************************************/
+/************************************************* maincopy */
+/************************************************************/
+@include m.mq(sp) {
+    .hero {
+        position: relative;
+        background: url("../img/img_top-mobile.webp");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+        display: grid;
+        place-items: center;
+        width: 100vw;
+        min-height: 100vh;
+        left: 0;
+        z-index: -1;
+        &_wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: index.$spc-xl;
+            background: rgba(0, 0, 0, 0.1);
+            padding-top: 100px;
+            width: 100%;
+            &-img {
+                width: 200px;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            &-catch {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: index.$spc-xs;
+            }
+            &-lead {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: index.$spc-l;
+                width: 100%;
+                margin-bottom: index.$spc-l;
+                dt {
+                    color: index.$zouge;
+                }
+                dd {
+                    text-align: center;
+                    font-size: index.$fs-m;
+                    line-height: index.$lh-l;
+                    color: index.$zouge;
+                }
+            }
+        }
+    }
+}
+@include m.mq(tab) {
+    .hero {
+        position: relative;
+        background: url("../img/img_top-pc.webp");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+        display: grid;
+        place-items: center;
+        width: 100%;
+        min-height: 100vh;
+        left: 0;
+        z-index: -1;
+        &_wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: index.$spc-xl;
+            padding-top: 100px;
+            width: 100%;
+            &-img {
+                width: 200px;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            &-catch {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: index.$spc-xs;
+            }
+            &-lead {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: index.$spc-l;
+                width: 100%;
+                margin-bottom: index.$spc-l;
+                dt {
+                    color: index.$zouge;
+                }
+                dd {
+                    text-align: center;
+                    font-size: index.$fs-m;
+                    line-height: index.$lh-l;
+                    color: index.$zouge;
+                }
+            }
+        }
+    }
+}
+@include m.mq(pc) {
+    .hero {
+        position: relative;
+        background: url("../img/img_top-pc.webp");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+        display: grid;
+        place-items: center;
+        width: 100%;
+        min-height: 100vh;
+        left: 0;
+        z-index: -1;
+        &_wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: index.$spc-xl;
+            background: rgba(0, 0, 0, 0.1);
+            padding-top: 100px;
+            width: 100%;
+            &-img {
+                width: 200px;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            &-catch {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: index.$spc-xs;
+            }
+            &-lead {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: index.$spc-l;
+                width: 100%;
+                margin-bottom: index.$spc-l;
+                dt {
+                    color: index.$zouge;
+                }
+                dd {
+                    text-align: center;
+                    font-size: index.$fs-m;
+                    line-height: index.$lh-l;
+                    color: index.$zouge;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/************************************************* campaign */
+/************************************************************/
+#campaign {
+    background: index.$keycolor-goldyellow;
+    padding: index.$spc-m;
+    display: flex;
+    flex-direction: column;
+    gap: index.$spc-s;
+    .campaign_title {
+        text-align: center;
+        background:linear-gradient(transparent 25%, #ff6 25%);
+    }
+    .campaign_description {
+        text-align: center;
+        background:linear-gradient(transparent 25%, #ff6 25%);
+    }
+    .campaign_price {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: index.$spc-xs;
+        min-width: 240px;
+        margin: auto;
+        &-item {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            &-small {
+                font-family: 'Wix Madefor Display', sans-serif;
+
+                text-decoration: line-through;
+                span {
+                    flex-direction: row;
+                    gap: 10px;
+                    font-family: inherit;
+                }
+            }
+            &-large {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 2px;
+                font-family: 'Wix Madefor Display', sans-serif;
+
+                font-size: index.$fs-8xl;
+                font-weight: 600;
+                span {
+                    font-family: "DM Sans",sans-serif;
+                    font-size: index.$fs-4xl;
+                }
+            }
+        }
+    }
+}

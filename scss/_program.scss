@@ -1,0 +1,353 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/************************************************** program */
+/************************************************************/
+@include m.mq(sp) {
+    .program {
+        width: 100%;
+        padding: index.$spc-l index.$spc-m index.$spc-xl;
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-s;
+            & > .label {
+                font-size: index.$fs-xl;
+                text-align: center;
+            }
+            & > .price {
+                font-family: 'Rubik', sans-serif;
+                font-weight: 600;
+                font-size: index.$fs-5xl;
+                text-align: center;
+                line-height: 1;
+            }
+            .program_itemlist {
+                display: flex;
+                flex-direction: column;
+                gap: index.$spc-m;
+                &-item {
+                    display: flex;
+                    flex-direction: column;
+                    border: solid 1px index.$acc-ngray-05;
+                    gap: index.$spc-xs;
+                    background: rgba(white, 0.6);
+                    backdrop-filter: blur(4px);
+                    .label {
+                        background: index.$r-beniaka;
+                        text-align: center;
+                        padding: 5px;
+                        color: white;
+                    }
+                    & > .price {
+                        text-align: center;
+                        font-family: 'Rubik', sans-serif;
+                        font-size: index.$fs-3xl;
+                        line-height: 1;
+                        font-weight: bold;
+                        margin-top: index.$spc-m;
+                    }
+                    .schedule {
+                        text-align: center;
+                        font-weight: bold;
+                        font-size: index.$fs-l;
+                        line-height: 1.5;
+                    }
+                    .comment {
+                        text-align: center;
+                        font-weight: bold;
+                        font-size: index.$fs-l;
+                        line-height: 1.5;
+                    }
+                    .discount {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: index.$spc-m;
+                        gap: index.$spc-s;
+                        background: index.$y-nanohana;
+                        padding: index.$spc-m;
+                        margin: index.$spc-m;
+                        .title {
+                            text-align: center;
+                            font-size: index.$fs-l;
+                            color: index.$r-beniaka;
+                        }
+                        .contents {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            font-weight: bold;
+                            font-size: index.$fs-l;
+                            gap: index.$spc-m;
+                            .rate {
+                                font-size: index.$fs-m;
+                                background: index.$acc-liteorange;
+                                padding: index.$spc-2xs index.$spc-xs;
+                                color: white;
+                            }
+                            .price {
+                                font-size: index.$fs-5xl;
+                                font-family: 'Rubik', sans-serif;
+                            }
+                        }
+                    }
+                    .image {
+                        padding: index.$spc-m;
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(tab) {
+    .program {
+        width: 100%;
+        padding: index.$spc-xl 0 index.$spc-2xl;
+        &_wrapper {
+            max-width: index.$maxvw-xl;
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-s;
+            margin: auto;
+            & > .label {
+                font-size: index.$fs-xl;
+                text-align: center;
+            }
+            & > .price {
+                font-family: 'Rubik', sans-serif;
+                font-weight: 600;
+                font-size: index.$fs-5xl;
+                text-align: center;
+                line-height: 1;
+            }
+            & > .section_body {
+                max-width: index.$maxvw-xs;
+                margin: auto;
+            }
+            & > img {
+                max-width: index.$maxvw-xs;
+                margin: 0 auto index.$spc-l;
+            }
+            .program_itemlist {
+                width: 100%;
+                max-width: index.$maxvw-xl;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: index.$spc-m;
+                margin: auto;
+                padding: 0 index.$spc-m;
+                &-item {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    border: solid 1px index.$acc-ngray-05;
+                    gap: index.$spc-xs;
+                    max-width: 31.5%;
+                    background: rgba(white, 0.6);
+                    backdrop-filter: blur(4px);
+                    .label {
+                        background: index.$r-beniaka;
+                        text-align: center;
+                        padding: 10px;
+                        color: white;
+                        font-size: index.$fs-xl;
+                        font-family: 'Rubik', sans-serif;
+                    }
+                    & > .price {
+                        text-align: center;
+                        font-family: 'Rubik', sans-serif;
+                        font-size: index.$fs-3xl;
+                        line-height: 1;
+                        font-weight: bold;
+                        margin-top: index.$spc-m;
+                    }
+                    .schedule {
+                        text-align: center;
+                        font-weight: bold;
+                        font-size: index.$fs-l;
+                        line-height: 1.5;
+                        padding: 0 index.$spc-m;
+                    }
+                    .comment {
+                        text-align: center;
+                        font-weight: bold;
+                        font-size: index.$fs-m;
+                        line-height: 1.5;
+                        padding: 0 index.$spc-m;
+                    }
+                    .discount {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: index.$spc-m;
+                        gap: index.$spc-s;
+                        background: index.$y-nanohana;
+                        padding: index.$spc-m;
+                        margin: index.$spc-m;
+                        .title {
+                            text-align: center;
+                            font-size: index.$fs-m;
+                            color: index.$r-beniaka;
+                        }
+                        .contents {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            font-weight: bold;
+                            font-size: index.$fs-l;
+                            gap: index.$spc-xs;
+                            .rate {
+                                font-size: index.$fs-m;
+                                background: index.$acc-liteorange;
+                                padding: index.$spc-2xs index.$spc-xs;
+                                color: white;
+                                white-space: nowrap;
+                            }
+                            .price {
+                                font-size: index.$fs-4xl;
+                                font-family: 'Rubik', sans-serif;
+                            }
+                        }
+                    }
+                    .image {
+                        padding: index.$spc-m;
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(pc) {
+    .program {
+        width: 100%;
+        padding: index.$spc-xl 0 index.$spc-2xl;
+        &_wrapper {
+            max-width: index.$maxvw-xl;
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-s;
+            margin: auto;
+            & > .label {
+                font-size: index.$fs-xl;
+                text-align: center;
+            }
+            & > .price {
+                font-family: 'Rubik', sans-serif;
+                font-weight: 600;
+                font-size: index.$fs-5xl;
+                text-align: center;
+                line-height: 1;
+            }
+            & > .section_body {
+                max-width: index.$maxvw-xs;
+                margin: auto;
+            }
+            & > img {
+                max-width: index.$maxvw-xs;
+                margin: 0 auto index.$spc-l;
+            }
+            .program_itemlist {
+                width: 100%;
+                max-width: index.$maxvw-xl;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: index.$spc-m;
+                margin: auto;
+                &-item {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    border: solid 1px index.$acc-ngray-05;
+                    gap: index.$spc-xs;
+                    max-width: 32%;
+                    background: rgba(white, 0.6);
+                    backdrop-filter: blur(4px);
+                    .label {
+                        background: index.$r-beniaka;
+                        text-align: center;
+                        padding: 10px;
+                        color: white;
+                        font-size: index.$fs-xl;
+                        font-family: 'Rubik', sans-serif;
+                    }
+                    & > .price {
+                        text-align: center;
+                        font-family: 'Rubik', sans-serif;
+                        font-size: index.$fs-3xl;
+                        line-height: 1;
+                        font-weight: bold;
+                        margin-top: index.$spc-m;
+                    }
+                    .schedule {
+                        text-align: center;
+                        font-weight: bold;
+                        font-size: index.$fs-l;
+                        line-height: 1.5;
+                        padding: 0 index.$spc-m;
+                    }
+                    .comment {
+                        text-align: center;
+                        font-weight: bold;
+                        font-size: index.$fs-l;
+                        line-height: 1.5;
+                        padding: 0 index.$spc-m;
+                    }
+                    .discount {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: index.$spc-m;
+                        gap: index.$spc-s;
+                        background: index.$y-nanohana;
+                        padding: index.$spc-m;
+                        margin: index.$spc-m;
+                        .title {
+                            text-align: center;
+                            font-size: index.$fs-l;
+                            color: index.$r-beniaka;
+                        }
+                        .contents {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            font-weight: bold;
+                            font-size: index.$fs-l;
+                            gap: index.$spc-m;
+                            .rate {
+                                font-size: index.$fs-m;
+                                background: index.$acc-liteorange;
+                                padding: index.$spc-2xs index.$spc-xs;
+                                color: white;
+                                white-space: nowrap;
+                            }
+                            .price {
+                                font-size: index.$fs-5xl;
+                                font-family: 'Rubik', sans-serif;
+                            }
+                        }
+                    }
+                    .image {
+                        padding: index.$spc-m;
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

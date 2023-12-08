@@ -1,0 +1,214 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/*************************************************** footer */
+/************************************************************/
+@include m.mq(sp) {
+    .footer_mobile {
+        background: index.$keycolor-darknavy-00;
+        .footer_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-m;
+            .footer_mobile_top_logo {
+                max-width: 150px;
+                padding: 40px 0 20px;
+                margin: auto;
+            }
+            .footer_mobile_gnav {
+                display: flex;
+                flex-direction: column;
+                gap: index.$spc-m;
+                align-items: flex-start;
+                padding: index.$spc-2xl;
+                & > li {
+                    a {
+                        padding: 5px;
+                        border-radius: 4px;
+                        &:link,
+                        &:visited {
+                            font-size: index.$fs-m;
+                            color: index.$zouge;
+                            text-decoration: none;
+                        }
+                        &:active {
+                            background: rgba(255, 255, 255, 0.1);
+                        }
+                    }
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        gap: index.$spc-m;
+                        margin-left: index.$spc-l;
+                        padding-top: index.$spc-m;
+                        li {
+                            a {
+                                padding: 5px;
+                                border-radius: 4px;
+                                &:link,
+                                &:visited {
+                                    font-size: index.$fs-m;
+                                    color: index.$zouge;
+                                    text-decoration: none;
+                                }
+                                &:active {
+                                    background: rgba(255, 255, 255, 0.1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer_mobile_credit {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #999;
+            padding: 20px 0 10px;
+        }
+    }
+}
+@include m.mq(tab) {
+    .footer_mobile {
+        background: index.$keycolor-darknavy-00;
+        width: 100%;
+        margin: auto;
+        .footer_wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            max-width: index.$maxvw-xxl;
+            margin: auto;
+            .footer_mobile_top {
+                display: grid;
+                place-items: center;
+                .footer_mobile_top_logo {
+                    max-width: 150px;
+                    padding: 40px 0 20px;
+                }
+            }
+            .footer_mobile_gnav {
+                display: flex;
+                flex-direction: column;
+                gap: index.$spc-m;
+                align-items: flex-start;
+                padding: index.$spc-2xl;
+                & > li {
+                    a {
+                        padding: 5px;
+                        border-radius: 4px;
+                        &:link,
+                        &:visited {
+                            font-size: index.$fs-m;
+                            color: index.$zouge;
+                            text-decoration: none;
+                        }
+                        &:active {
+                            background: rgba(255, 255, 255, 0.1);
+                        }
+                    }
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        gap: index.$spc-m;
+                        margin-left: index.$spc-l;
+                        padding-top: index.$spc-m;
+                        li {
+                            a {
+                                padding: 5px;
+                                border-radius: 4px;
+                                &:link,
+                                &:visited {
+                                    font-size: index.$fs-m;
+                                    color: index.$zouge;
+                                    text-decoration: none;
+                                }
+                                &:active {
+                                    background: rgba(255, 255, 255, 0.1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer_mobile_credit {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #999;
+            padding: 20px 0 10px;
+        }
+    }
+}
+@include m.mq(pc) {
+    .footer_mobile {
+        background: index.$keycolor-darknavy-00;
+        width: 100%;
+        margin: auto;
+        .footer_wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            max-width: index.$maxvw-xxl;
+            margin: auto;
+            .footer_mobile_top {
+                display: grid;
+                place-items: center;
+                .footer_mobile_top_logo {
+                    max-width: 150px;
+                    padding: 40px 0 20px;
+                }
+            }
+            .footer_mobile_gnav {
+                display: flex;
+                flex-direction: column;
+                gap: index.$spc-m;
+                align-items: flex-start;
+                padding: index.$spc-2xl;
+                & > li {
+                    a {
+                        padding: 5px;
+                        border-radius: 4px;
+                        &:link,
+                        &:visited {
+                            font-size: index.$fs-m;
+                            color: index.$zouge;
+                            text-decoration: none;
+                        }
+                        &:active {
+                            background: rgba(255, 255, 255, 0.1);
+                        }
+                    }
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        gap: index.$spc-m;
+                        margin-left: index.$spc-l;
+                        padding-top: index.$spc-m;
+                        li {
+                            a {
+                                padding: 5px;
+                                border-radius: 4px;
+                                &:link,
+                                &:visited {
+                                    font-size: index.$fs-m;
+                                    color: index.$zouge;
+                                    text-decoration: none;
+                                }
+                                &:active {
+                                    background: rgba(255, 255, 255, 0.1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer_mobile_credit {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #999;
+            padding: 20px 0 10px;
+        }
+    }
+}

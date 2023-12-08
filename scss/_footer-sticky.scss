@@ -1,0 +1,625 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/******************************************** footer sticky */
+/************************************************************/
+@include m.mq(sp) {
+	.float_banner {
+		display: none;
+	}
+	#footbnr {
+		position: fixed;
+		left: index.$spc-l;
+		bottom: index.$spc-l;
+		z-index: 97;
+		transition: all 0.3s ease-in-out 0s;
+		&.hide {
+			bottom: -220px;
+			z-index: 97;
+			transition: all 0.3s ease-in-out 0s;
+		}
+	}
+	.footbnr {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 70%;
+		backdrop-filter: blur(2px);
+		gap: index.$fspc-xs;
+		color: white;
+		margin: auto;
+		background: rgba(index.$white, 0.8);
+		padding-top: 10px;
+		border-radius: 8px;
+		overflow: hidden;
+		border: solid 2px index.$white;
+		filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.6));
+		.footbnr {
+			&_wrapper {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 10px;
+				width: 100%;
+				.footbnr_title {
+					font-size: index.$fs-m;
+					color: index.$b-kachikaeshi;
+				}
+				.footbnr_limit {
+					font-family: 'BIZ UDPGothic', sans-serif;
+					font-weight: 700;
+					font-size: index.$fs-xl;
+					color: index.$r-beniaka;
+					background: index.$y-nanohana;
+					text-align: center;
+					width: 100%;
+					padding: 10px;
+					span {
+						font-size: index.$fs-3xl;
+						color: index.$r-beniaka;
+						margin: 0 2px;
+						position: relative;
+						top: 2px;
+					}
+				}
+				.footbnr_main {
+					display: flex;
+					align-items: center;
+					& > div {
+						font-size: index.$fs-m;
+						line-height: index.$lh-m;
+						font-weight: 600;
+						text-align: center;
+						&.footbnr_price {
+							font-size: index.$fs-m;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							gap: 5px;
+							color: index.$b-kachikaeshi;
+							& > span {
+								display: flex;
+								align-items: center;
+								font-size: index.$fs-xl;
+								text-decoration: line-through;
+								font-weight: 600;
+								color: inherit;
+								span {
+									font-size: index.$fs-m;
+									color: inherit;
+								}
+							}
+						}
+						&.footbnr_zero {
+							display: flex;
+							align-items: center;
+							gap: 2px;
+							span {
+								font-size: index.$fs-xl;
+								&.yen {
+									font-size: index.$fs-3xl;
+									margin-right: 1px;
+								}
+								&.large {
+									font-family: 'Wix Madefor Display', sans-serif;
+
+									font-size: index.$fs-7xl;
+									position: relative;
+									top: -3px;
+								}
+							}
+						}
+					}
+				}
+				.footbnr_reserve {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+					gap: 5px;
+					background: index.$b-kachikaeshi;
+					width: 100%;
+					padding: 5px 10px;
+					li {
+						color: index.$white;
+						font-size: index.$fs-s;
+						&:first-child {
+							margin-right: auto;
+						}
+					}
+					.footbnr_icon {
+						a {
+							width: 32px;
+							height: 32px;
+							img {
+								width: 32px;
+								color: index.$white;
+							}
+						}
+					}
+				}
+			}
+		}
+		a {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: index.$spc-s;
+			padding-bottom: index.$spc-m;
+				.top {
+					display: grid;
+					place-items: center;
+					font-size: index.$fs-m;
+					font-weight: 600;
+					background: index.$b-kachikaeshi;
+					height: 36px;
+					color: white;
+					padding: 0 12px;
+					width: 100%;
+					border-radius: 14px 14px 0 0;
+				}
+				.middle {
+					font-family: 'Mochiy Pop P One', sans-serif;
+					font-size: index.$fs-3xl;
+					font-weight: 700;
+					letter-spacing: 1px;
+					color: index.$r-beniaka;
+					text-shadow:1px 1px 0 #fff, 2px 2px 2px index.$y-mokuranjiki;
+					span {
+						font-size: index.$fs-m;
+						letter-spacing: 0;
+					}
+				}
+				.bottom {
+					font-size: index.$fs-m;
+					display: flex;
+					flex-direction: row;
+					align-items: flex-end;
+					.material-symbols-outlined {
+						font-size: index.$fs-xl;
+						position: relative;
+						top: 2px;
+					}
+					span {
+						font-size: index.$fs-m;
+						font-weight: 600;
+					}
+				}
+			}
+			.footer_sticky_split {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: index.$fspc-xs;
+				background: orange;
+				color: white;
+				padding: index.$spc-m;
+				.material-symbols-outlined {
+					color: white;
+					font-size: index.$fs-3xl;
+				}
+				.text {
+					font-family: 'Rubik', sans-serif;
+					font-size: index.$fs-m;
+					font-weight: 600;
+					color: white;
+				}
+			}
+		}
+}
+
+@include m.mq(tab) {
+	.float_banner {
+		display: none;
+	}
+	#footbnr {
+		position: fixed;
+		left: index.$spc-l;
+		bottom: index.$spc-l;
+		z-index: 97;
+		transition: all 0.3s ease-in-out 0s;
+		&.hide {
+			bottom: -220px;
+			z-index: 97;
+			transition: all 0.3s ease-in-out 0s;
+		}
+	}
+	.footbnr {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		max-width: 300px;;
+		backdrop-filter: blur(2px);
+		gap: index.$fspc-xs;
+		color: white;
+		margin: auto;
+		background: rgba(index.$white, 0.8);
+		padding-top: 10px;
+		border-radius: 8px;
+		overflow: hidden;
+		border: solid 2px index.$white;
+		filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.6));
+		.footbnr {
+			&_wrapper {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 10px;
+				width: 100%;
+				.footbnr_title {
+					font-size: index.$fs-m;
+					color: index.$b-kachikaeshi;
+				}
+				.footbnr_limit {
+					font-family: 'BIZ UDPGothic', sans-serif;
+					font-weight: 700;
+					font-size: index.$fs-xl;
+					color: index.$r-beniaka;
+					background: index.$y-nanohana;
+					text-align: center;
+					width: 100%;
+					padding: 10px;
+					span {
+						font-size: index.$fs-3xl;
+						color: index.$r-beniaka;
+						margin: 0 2px;
+						position: relative;
+						top: 2px;
+					}
+				}
+				.footbnr_main {
+					display: flex;
+					align-items: center;
+					& > div {
+						font-size: index.$fs-m;
+						line-height: index.$lh-m;
+						font-weight: 600;
+						text-align: center;
+						&.footbnr_price {
+							font-size: index.$fs-m;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							gap: 5px;
+							color: index.$b-kachikaeshi;
+							& > span {
+								display: flex;
+								align-items: center;
+								font-size: index.$fs-xl;
+								text-decoration: line-through;
+								font-weight: 600;
+								color: inherit;
+								span {
+									font-size: index.$fs-m;
+									color: inherit;
+								}
+							}
+						}
+						&.footbnr_zero {
+							display: flex;
+							align-items: center;
+							gap: 2px;
+							span {
+								font-size: index.$fs-xl;
+								&.yen {
+									font-size: index.$fs-3xl;
+									margin-right: 1px;
+								}
+								&.large {
+									font-family: 'Wix Madefor Display', sans-serif;
+
+									font-size: index.$fs-7xl;
+									position: relative;
+									top: -3px;
+								}
+							}
+						}
+					}
+				}
+				.footbnr_reserve {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+					gap: 5px;
+					background: index.$b-kachikaeshi;
+					width: 100%;
+					padding: 5px 10px;
+					li {
+						color: index.$white;
+						font-size: index.$fs-s;
+						&:first-child {
+							margin-right: auto;
+						}
+					}
+					.footbnr_icon {
+						a {
+							width: 32px;
+							height: 32px;
+							img {
+								width: 32px;
+								color: index.$white;
+							}
+						}
+					}
+				}
+			}
+		}
+		a {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: index.$spc-s;
+			padding-bottom: index.$spc-m;
+				.top {
+					display: grid;
+					place-items: center;
+					font-size: index.$fs-m;
+					font-weight: 600;
+					background: index.$b-kachikaeshi;
+					height: 36px;
+					color: white;
+					padding: 0 12px;
+					width: 100%;
+					border-radius: 14px 14px 0 0;
+				}
+				.middle {
+					font-family: 'Mochiy Pop P One', sans-serif;
+					font-size: index.$fs-3xl;
+					font-weight: 700;
+					letter-spacing: 1px;
+					color: index.$r-beniaka;
+					text-shadow:1px 1px 0 #fff, 2px 2px 2px index.$y-mokuranjiki;
+					span {
+						font-size: index.$fs-m;
+						letter-spacing: 0;
+					}
+				}
+				.bottom {
+					font-size: index.$fs-m;
+					display: flex;
+					flex-direction: row;
+					align-items: flex-end;
+					.material-symbols-outlined {
+						font-size: index.$fs-xl;
+						position: relative;
+						top: 2px;
+					}
+					span {
+						font-size: index.$fs-m;
+						font-weight: 600;
+					}
+				}
+			}
+			.footer_sticky_split {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: index.$fspc-xs;
+				background: orange;
+				color: white;
+				padding: index.$spc-m;
+				.material-symbols-outlined {
+					color: white;
+					font-size: index.$fs-3xl;
+				}
+				.text {
+					font-family: 'Rubik', sans-serif;
+					font-size: index.$fs-m;
+					font-weight: 600;
+					color: white;
+				}
+			}
+		}
+}
+@include m.mq(pc) {
+	.float_banner {
+		display: none;
+	}
+	#footbnr {
+		position: fixed;
+		right: index.$spc-l;
+		bottom: calc(index.$spc-l * 4);
+		z-index: 97;
+		transition: all 0.3s ease-in-out 0s;
+		&.hide {
+			bottom: -220px;
+			z-index: 97;
+			transition: all 0.3s ease-in-out 0s;
+		}
+	}
+	.footbnr {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: index.$maxvw-2xs;
+		backdrop-filter: blur(2px);
+		gap: index.$fspc-xs;
+		color: white;
+		margin: auto;
+		background: rgba(index.$white, 0.8);
+		padding-top: 10px;
+		border-radius: 8px;
+		overflow: hidden;
+		border: solid 2px index.$white;
+		filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.6));
+		.footbnr {
+			&_wrapper {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 10px;
+				width: 100%;
+				.footbnr_title {
+					font-size: index.$fs-m;
+					color: index.$b-kachikaeshi;
+				}
+				.footbnr_limit {
+					font-family: 'BIZ UDPGothic', sans-serif;
+					font-weight: 700;
+					font-size: index.$fs-xl;
+					color: index.$r-beniaka;
+					background: index.$y-nanohana;
+					text-align: center;
+					width: 100%;
+					padding: 10px;
+					span {
+						font-size: index.$fs-3xl;
+						color: index.$r-beniaka;
+						margin: 0 2px;
+						position: relative;
+						top: 2px;
+					}
+				}
+				.footbnr_main {
+					display: flex;
+					align-items: center;
+					& > div {
+						font-size: index.$fs-m;
+						line-height: index.$lh-m;
+						font-weight: 600;
+						text-align: center;
+						&.footbnr_price {
+							font-size: index.$fs-m;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							gap: 5px;
+							color: index.$b-kachikaeshi;
+							& > span {
+								display: flex;
+								align-items: center;
+								font-size: index.$fs-xl;
+								text-decoration: line-through;
+								font-weight: 600;
+								color: inherit;
+								span {
+									font-size: index.$fs-m;
+									color: inherit;
+								}
+							}
+						}
+						&.footbnr_zero {
+							display: flex;
+							align-items: center;
+							gap: 2px;
+							span {
+								font-size: index.$fs-xl;
+								&.yen {
+									font-size: index.$fs-3xl;
+									margin-right: 1px;
+								}
+								&.large {
+									font-family: 'Wix Madefor Display', sans-serif;
+
+									font-size: index.$fs-7xl;
+									position: relative;
+									top: -3px;
+								}
+							}
+						}
+					}
+				}
+				.footbnr_reserve {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+					gap: 5px;
+					background: index.$b-kachikaeshi;
+					width: 100%;
+					padding: 5px 10px;
+					li {
+						color: index.$white;
+						font-size: index.$fs-s;
+						&:first-child {
+							margin-right: auto;
+						}
+					}
+					.footbnr_icon {
+						a {
+							width: 32px;
+							height: 32px;
+							img {
+								width: 32px;
+								color: index.$white;
+							}
+						}
+					}
+				}
+			}
+		}
+		a {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: index.$spc-s;
+			padding-bottom: index.$spc-m;
+				.top {
+					display: grid;
+					place-items: center;
+					font-size: index.$fs-m;
+					font-weight: 600;
+					background: index.$b-kachikaeshi;
+					height: 36px;
+					color: white;
+					padding: 0 12px;
+					width: 100%;
+					border-radius: 14px 14px 0 0;
+				}
+				.middle {
+					font-family: 'Mochiy Pop P One', sans-serif;
+					font-size: index.$fs-3xl;
+					font-weight: 700;
+					letter-spacing: 1px;
+					color: index.$r-beniaka;
+					text-shadow:1px 1px 0 #fff, 2px 2px 2px index.$y-mokuranjiki;
+					span {
+						font-size: index.$fs-m;
+						letter-spacing: 0;
+					}
+				}
+				.bottom {
+					font-size: index.$fs-m;
+					display: flex;
+					flex-direction: row;
+					align-items: flex-end;
+					.material-symbols-outlined {
+						font-size: index.$fs-xl;
+						position: relative;
+						top: 2px;
+					}
+					span {
+						font-size: index.$fs-m;
+						font-weight: 600;
+					}
+				}
+			}
+			.footer_sticky_split {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: index.$fspc-xs;
+				background: orange;
+				color: white;
+				padding: index.$spc-m;
+				.material-symbols-outlined {
+					color: white;
+					font-size: index.$fs-3xl;
+				}
+				.text {
+					font-family: 'Rubik', sans-serif;
+					font-size: index.$fs-m;
+					font-weight: 600;
+					color: white;
+				}
+			}
+		}
+}

@@ -214,7 +214,7 @@
             margin: auto;
             .information_itemlist {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                grid-template-columns: repeat(3, minmax(360px, 1fr));
                 gap: index.$spc-m;
                 padding: index.$spc-l;
                 &-item {

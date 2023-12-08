@@ -144,7 +144,7 @@
                             <dd>¥5,000</dd>
                         </div>
                         <div class="item-initial-list-item">
-                            <dt>入会金／登録料（年間）</dt>
+                            <dt>入会金／登録料</dt>
                             <dd>¥22,000</dd>
                         </div>
                     </dl>
@@ -153,7 +153,7 @@
                         <h3>体験当日にご入会いただくと</h3>
                         <div class="price_list-initial-item">
                             <dl>
-                                <dt>入会金／登録料（年間）¥22,000</dt>
+                                <dt>入会金／登録料 ¥22,000</dt>
                                 <div>
                                     <dd class="campaign-price discount">50% OFF</dd>
                                     <!-- <dd>
@@ -215,7 +215,7 @@
                             <dd>¥5,000</dd>
                         </div>
                         <div class="item-initial-list-item">
-                            <dt>入会金／登録料（年間）</dt>
+                            <dt>入会金／登録料</dt>
                             <dd>¥22,000</dd>
                         </div>
                     </dl>
@@ -232,7 +232,7 @@
                                     </dd> -->
                                     <dd class="campaign-price large"><span>¥</span>0</dd>
                                 </div>
-                                <dt>入会金／登録料（年間）¥22,000</dt>
+                                <dt>入会金／登録料 ¥22,000</dt>
                                 <div>
                                     <dd class="campaign-price discount">Free!</dd>
                                     <!-- <dd>

@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html  <?php language_attributes(); ?>>
   <head>
-    <!-- Google Tag Manager -->
-    <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TDDHZX5');</script> -->
-    <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMM0G26HP7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-TMM0G26HP7');
+  </script>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
@@ -25,10 +27,6 @@
     <link rel="shortcut icon" href="<?php echo home_url(); ?>/favicon.ico">
   </head>
   <body>
-  <!-- Google Tag Manager (noscript) -->
-  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDDHZX5"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
-  <!-- End Google Tag Manager (noscript) -->
     <?php wp_body_open(); ?>
     <header id="header_mobile" class="header">
       <div class="icon_wrapper">
@@ -71,11 +69,6 @@
                       <span class="mask_icon-mail"></span>
                     </a>
                   </li>
-                  <li class="sns_iconlist-item">
-                    <a href="tel:08046841809" class="mask-m">
-                      <span class="mask_icon-phone"></span>
-                    </a>
-                  </li>
                 </ul>
               </li>
             </ul>
@@ -107,11 +100,6 @@
               <li class="icon">
                 <a href="<?php echo home_url(); ?>/#form">
                   <img src="<?php echo get_template_directory_uri(); ?>/img/icon_mail-color.svg">
-                </a>
-              </li>
-              <li class="icon">
-                <a href="tel:08046841809">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/icon_phone-color.svg">
                 </a>
               </li>
             </ul>

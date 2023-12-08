@@ -6029,7 +6029,7 @@
   }
   .information_wrapper .information_itemlist {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(3, minmax(360px, 1fr));
     gap: clamp(10px, 5vmin, 20px);
     padding: clamp(15px, 6vmin, 30px);
   }

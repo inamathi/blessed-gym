@@ -397,14 +397,14 @@
                 <dt>zip :</dt><dd>〒241-0825</dd>
             </div>
             <div class="gyminfo_location-item">
-                <dt>address :</dt><dd>神奈川県横浜市旭区中希望が丘146-6</dd>
+                <dt>address :</dt><dd>神奈川県横浜市旭区中希望ヶ丘102-19<wbr>PMZ希望ヶ丘204</dd>
             </div>
             <div class="gyminfo_location-item">
                 <dt>tel :</dt><dd>080-4684-1809</dd>
             </div>
         </dl>
         <div class="gyminfo_map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.810417234515!2d139.50906087600305!3d35.45948764212271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018576bf45ee65d%3A0x5a85c08890e0f993!2z44CSMjQxLTA4MjUg56We5aWI5bed55yM5qiq5rWc5biC5pet5Yy65Lit5biM5pyb44GM5LiY77yR77yU77yW4oiS77yWIOOCteODs-ODj-OCpOODhOOCouOCpOODgA!5e0!3m2!1sja!2sjp!4v1701911064582!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.8305350288006!2d139.51219367593043!3d35.45898964215023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601857e6bbbdc01b%3A0xabe0ba49ac26024f!2zQkxFU1NFRCBjb25kaXRpb25pbmcgZ3ltIC3jg5bjg6zjgrnjg4njgrjjg6At!5e0!3m2!1sja!2sjp!4v1702388072074!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 </section>

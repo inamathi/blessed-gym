@@ -34,14 +34,18 @@
                 width: 100%;
                 &-item {
                     display: flex;
-                    gap: 5px;
+                    align-items: center;
+                    gap: 10px;
                     dt {
+                        display: flex;
+                        align-items: center;
                         font-size: index.$fs-s;
+                        white-space: nowrap;
                         &.kana {
                             font-size: index.$fs-m;
                             font-weight: 600;
                             position: relative;
-                            left: 20px;
+                            left: 5px;
                             &::before {
                                 content: '';
                                 display: block;
@@ -49,7 +53,7 @@
                                 width: 15px;
                                 height: 1px;
                                 background: index.$b-kachikaeshi;
-                                left: -20px;
+                                left: -5px;
                                 top: 50%;
                             }
                             &::after {
@@ -65,8 +69,12 @@
                         }
                     }
                     dd {
+                        display: flex;
+                        align-items: center;
                         font-weight: 500;
                         font-size: index.$fs-m;
+                        line-height: index.$lh-s;
+                        @include m.break-sentence;
                     }
                 }
             }
@@ -138,12 +146,17 @@
                     display: flex;
                     gap: 5px;
                     dt {
+                        display: flex;
+                        align-items: center;
                         font-size: index.$fs-s;
+                        white-space: nowrap;
                         &.kana {
+                            display: flex;
+                            align-items: center;
                             font-size: index.$fs-m;
                             font-weight: 600;
                             position: relative;
-                            left: 20px;
+                            left: 5px;
                             &::before {
                                 content: '';
                                 display: block;
@@ -151,8 +164,7 @@
                                 width: 15px;
                                 height: 1px;
                                 background: index.$b-kachikaeshi;
-                                left: -20px;
-                                top: 50%;
+                                left: -5px;
                             }
                             &::after {
                                 content: '';
@@ -167,8 +179,11 @@
                         }
                     }
                     dd {
+                        display: flex;
+                        align-items: center;
                         font-weight: 500;
                         font-size: index.$fs-m;
+                        line-height: index.$lh-m;
                     }
                 }
             }
@@ -238,18 +253,22 @@
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
-                gap: index.$spc-s;
+                gap: 10px;
                 width: 100%;
                 &-item {
                     display: flex;
+                    align-items: center;
                     gap: 5px;
                     dt {
                         font-size: index.$fs-s;
+                        white-space: nowrap;
                         &.kana {
+                            display: flex;
+                            align-items: center;
                             font-size: index.$fs-m;
                             font-weight: 600;
                             position: relative;
-                            left: 20px;
+                            left: 5px;
                             &::before {
                                 content: '';
                                 display: block;
@@ -257,8 +276,7 @@
                                 width: 15px;
                                 height: 1px;
                                 background: index.$b-kachikaeshi;
-                                left: -20px;
-                                top: 50%;
+                                left: -5px;
                             }
                             &::after {
                                 content: '';
@@ -275,6 +293,7 @@
                     dd {
                         font-weight: 500;
                         font-size: index.$fs-m;
+                        line-height: index.$lh-s;
                     }
                 }
             }

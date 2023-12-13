@@ -7,7 +7,7 @@
 @include m.mq(sp) {
 	#header_mobile {
 		position: fixed;
-		top: 100;
+		top: 0px;
 		z-index: 97;
 		transition: all 0.3s ease-in-out 0s;
 		display: flex;
@@ -17,6 +17,7 @@
 		width: 100%;
 		gap: 20px;
 		padding: 0 20px;
+		transition: all 0.3s ease;
 		.icon_wrapper {
 			& > div {
 				a {
@@ -37,15 +38,15 @@
 		}
 	}
 	#header_mobile.hide {
-		position: sticky;
+		position: fixed;
 		top: -54px;
-		transition: all 0.3s ease-in-out 0s;
+		transition: all 0.3s ease;
 	}
 	.header_mobile {
 		&-logo {
-			height: 50px;
+			width: 120px;
 			img {
-				height: fit-content;
+				width: fit-content;
 				object-fit: cover;
 			}
 		}

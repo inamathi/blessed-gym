@@ -379,7 +379,7 @@
 @media screen and (max-width: 767.98px) {
   #header_mobile {
     position: fixed;
-    top: 100;
+    top: 0px;
     z-index: 97;
     transition: all 0.3s ease-in-out 0s;
     display: flex;
@@ -389,6 +389,7 @@
     width: 100%;
     gap: 20px;
     padding: 0 20px;
+    transition: all 0.3s ease;
   }
   #header_mobile .icon_wrapper > div a {
     display: flex;
@@ -403,18 +404,17 @@
     color: white;
   }
   #header_mobile.hide {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: -54px;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease;
   }
   .header_mobile-logo {
-    height: 50px;
+    width: 120px;
   }
   .header_mobile-logo img {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -3226,16 +3226,20 @@
   }
   .gyminfo_wrapper .gyminfo_location-item {
     display: flex;
-    gap: 5px;
+    align-items: center;
+    gap: 10px;
   }
   .gyminfo_wrapper .gyminfo_location-item dt {
+    display: flex;
+    align-items: center;
     font-size: clamp(13px, 2vmin, 14px);
+    white-space: nowrap;
   }
   .gyminfo_wrapper .gyminfo_location-item dt.kana {
     font-size: clamp(14px, 3vmin, 16px);
     font-weight: 600;
     position: relative;
-    left: 20px;
+    left: 5px;
   }
   .gyminfo_wrapper .gyminfo_location-item dt.kana::before {
     content: "";
@@ -3244,7 +3248,7 @@
     width: 15px;
     height: 1px;
     background: #203744;
-    left: -20px;
+    left: -5px;
     top: 50%;
   }
   .gyminfo_wrapper .gyminfo_location-item dt.kana::after {
@@ -3258,8 +3262,13 @@
     top: calc(50% - 1px);
   }
   .gyminfo_wrapper .gyminfo_location-item dd {
+    display: flex;
+    align-items: center;
     font-weight: 500;
     font-size: clamp(14px, 3vmin, 16px);
+    line-height: 1.6;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
   .gyminfo_wrapper .gyminfo_map {
     width: 100%;
@@ -3332,13 +3341,16 @@
     gap: 5px;
   }
   .gyminfo_wrapper .gyminfo_location-item dt {
+    display: flex;
+    align-items: center;
     font-size: clamp(13px, 2vmin, 14px);
+    white-space: nowrap;
   }
   .gyminfo_wrapper .gyminfo_location-item dt.kana {
     font-size: clamp(14px, 3vmin, 16px);
     font-weight: 600;
     position: relative;
-    left: 20px;
+    left: 5px;
   }
   .gyminfo_wrapper .gyminfo_location-item dt.kana::before {
     content: "";
@@ -3347,8 +3359,7 @@
     width: 15px;
     height: 1px;
     background: #203744;
-    left: -20px;
-    top: 50%;
+    left: -5px;
   }
   .gyminfo_wrapper .gyminfo_location-item dt.kana::after {
     content: "";
@@ -3361,8 +3372,11 @@
     top: calc(50% - 1px);
   }
   .gyminfo_wrapper .gyminfo_location-item dd {
+    display: flex;
+    align-items: center;
     font-weight: 500;
     font-size: clamp(14px, 3vmin, 16px);
+    line-height: 1.8;
   }
   .gyminfo_wrapper .gyminfo_map {
     width: 100%;
@@ -3431,21 +3445,25 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: clamp(8px, 4vmin, 16px);
+    gap: 10px;
     width: 100%;
   }
   .gyminfo_wrapper .gyminfo_location-item {
     display: flex;
+    align-items: center;
     gap: 5px;
   }
   .gyminfo_wrapper .gyminfo_location-item dt {
     font-size: clamp(13px, 2vmin, 14px);
+    white-space: nowrap;
   }
   .gyminfo_wrapper .gyminfo_location-item dt.kana {
+    display: flex;
+    align-items: center;
     font-size: clamp(14px, 3vmin, 16px);
     font-weight: 600;
     position: relative;
-    left: 20px;
+    left: 5px;
   }
   .gyminfo_wrapper .gyminfo_location-item dt.kana::before {
     content: "";
@@ -3454,7 +3472,7 @@
     width: 15px;
     height: 1px;
     background: #203744;
-    left: -20px;
+    left: -5px;
     top: 50%;
   }
   .gyminfo_wrapper .gyminfo_location-item dt.kana::after {
@@ -3470,6 +3488,7 @@
   .gyminfo_wrapper .gyminfo_location-item dd {
     font-weight: 500;
     font-size: clamp(14px, 3vmin, 16px);
+    line-height: 1.6;
   }
   .gyminfo_wrapper .gyminfo_map {
     grid-row: 1/3;
@@ -4950,10 +4969,12 @@
 @media screen and (max-width: 767.98px) {
   .hero {
     position: relative;
-    background: url("../img/img_top-mobile.webp");
-    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url("../img/img_top-mobile.webp");
+    background-size: contain;
     background-attachment: fixed;
-    background-position: center center;
+    background-repeat: no-repeat;
+    background-position: top;
     display: grid;
     place-items: center;
     width: 100vw;
@@ -4973,7 +4994,7 @@
     width: 100%;
   }
   .hero_wrapper-img {
-    width: 200px;
+    width: 150px;
   }
   .hero_wrapper-img img {
     width: 100%;
@@ -5008,12 +5029,13 @@
   .hero {
     position: relative;
     background: url("../img/img_top-pc.webp");
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
     background-attachment: fixed;
-    background-position: center center;
+    background-position: top;
     display: grid;
     place-items: center;
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     left: 0;
     z-index: -1;

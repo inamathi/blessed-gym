@@ -23,7 +23,7 @@
             <div class="swiper-slide"><img class="slide-img" src="<?php echo get_template_directory_uri(); ?>/img/carousel_item-02.png" alt=""></div>
             <div class="swiper-slide"><img class="slide-img" src="<?php echo get_template_directory_uri(); ?>/img/carousel_item-03.png" alt=""></div>
             <div class="swiper-slide"><img class="slide-img" src="<?php echo get_template_directory_uri(); ?>/img/carousel_item-04.png" alt=""></div>
-            <div class="swiper-slide"><img class="slide-img" src="<?php echo get_template_directory_uri(); ?>/img/carousel_item-05.png" alt=""></div>
+            <div class="swiper-slide"><img class="slide-img" src="<?php echo get_template_directory_uri(); ?>/img/carousel_item-06.png" alt=""></div>
         </div>
     </div>
 </section>

@@ -1,7 +1,8 @@
 <section id="footbnr" class="footbnr">
     <div class="footbnr_wrapper">
-        <h2 class="footbnr_title">サイトオープンキャンペーン</h2>
-        <h3 class="footbnr_limit">先着<span>30</span>名様</h3>
+        <h2 class="footbnr_title">新春キャンペーン</h2>
+        <!-- <h3 class="footbnr_limit">先着<span>30</span>名様</h3> -->
+        <h3 class="footbnr_limit">整体 × トレーニング</h3>
         <div class="footbnr_main">
             <div class="footbnr_price">体験料<span><span>¥</span>5,500</span></div>
             <div class="footbnr_zero">

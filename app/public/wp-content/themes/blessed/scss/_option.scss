@@ -1,0 +1,183 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/************************************************** option */
+/************************************************************/
+.option {
+  width: 100%;
+  background: rgba(index.$keycolor-litegray, 0.1);
+  background-blend-mode: multiply;
+  padding-top: index.$spc-l;
+  padding-bottom: index.$spc-l;
+  &_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: index.$spc-s;
+    padding: index.$spc-2xl;
+    .option_body {
+      display: flex;
+      flex-direction: column;
+      gap: index.$spc-xl;
+      &-catch {
+        font-size: index.$fs-xl;
+        line-height: index.$lh-s;
+        text-align: center;
+        @include m.break-sentence;
+      }
+    }
+    .option_list {
+      display: flex;
+      flex-direction: column;
+      gap: index.$spc-m;
+      &-title {
+        font-weight: 500;
+        font-size: index.$fs-l;
+        line-height: index.$lh-s;
+        text-align: justify;
+        color: index.$keycolor-darkGreishyellow;
+      }
+      &-contents {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          li {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            span {
+              align-items: center;
+              font-size: index.$fs-l;
+              line-height: index.$lh-s;
+              @include m.break-sentence;
+              &.material-symbols-outlined {
+                font-size: index.$fs-2xl;
+                color: index.$keycolor-darkGreishyellow;
+              }
+            }
+          }
+        }
+      }
+      &-item {
+        display: flex;
+        flex-direction: column;
+        gap: index.$spc-xs;
+        &-title {
+          display: flex;
+          justify-content: left;
+          font-size: index.$fs-m;
+          font-weight: 400;
+        }
+        &-linkbtn {
+          border: solid 1px index.$b-kachikaeshi;
+          background: index.$white;
+          border-radius: 8px;
+          @include m.gener_shadow;
+          a {
+            display: flex;
+            justify-content: center;
+            font-size: index.$fs-l;
+            padding: index.$spc-s;
+            font-weight: 600;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@include m.mq(sp) {
+}
+@include m.mq(tab) {
+}
+@include m.mq(pc) {
+  .option {
+    width: 100%;
+    background: rgba(index.$keycolor-litegray, 0.1);
+    background-blend-mode: multiply;
+    padding-top: index.$spc-l;
+    padding-bottom: index.$spc-l;
+    &_wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: index.$spc-s;
+      padding: index.$spc-2xl;
+      max-width: index.$maxvw-s;
+      margin: auto;
+      .option_body {
+        display: flex;
+        flex-direction: column;
+        gap: index.$spc-xl;
+        &-catch {
+          font-size: index.$fs-2xl;
+          line-height: index.$lh-s;
+          text-align: center;
+          @include m.break-sentence;
+        }
+      }
+      .option_list {
+        display: flex;
+        flex-direction: column;
+        gap: index.$spc-m;
+        &-title {
+          font-weight: 500;
+          font-size: index.$fs-xl;
+          line-height: index.$lh-m;
+          text-align: center;
+          color: index.$keycolor-darkGreishyellow;
+          @include m.break-sentence;
+        }
+        &-contents {
+          ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            li {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              span {
+                height: 32px;
+                display: flex;
+                align-items: center;
+                font-size: index.$fs-l;
+                line-height: index.$lh-xs;
+                @include m.break-sentence;
+                &.material-symbols-outlined {
+                  font-size: index.$fs-2xl;
+                  color: index.$keycolor-darkGreishyellow;
+                }
+              }
+            }
+          }
+        }
+        &-item {
+          display: flex;
+          flex-direction: column;
+          gap: index.$spc-xs;
+          &-title {
+            display: flex;
+            justify-content: left;
+            font-size: index.$fs-m;
+            font-weight: 400;
+          }
+          &-linkbtn {
+            border: solid 1px index.$b-kachikaeshi;
+            background: index.$white;
+            border-radius: 8px;
+            @include m.gener_shadow;
+            a {
+              display: flex;
+              justify-content: center;
+              font-size: index.$fs-l;
+              padding: index.$spc-s;
+              font-weight: 600;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

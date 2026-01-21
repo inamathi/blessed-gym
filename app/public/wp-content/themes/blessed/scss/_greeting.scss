@@ -1,0 +1,199 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/************************************************* greeting */
+/************************************************************/
+.greeting {
+    width: 100%;
+    background: rgba(index.$y-bgyellow, 0.1);
+    background-blend-mode: multiply;
+    padding-top: index.$spc-l;
+    padding-bottom: index.$spc-l;
+    width: 100vw;
+    overflow: hidden;
+    &_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: index.$spc-s;
+        padding: index.$spc-l;
+        .greeting_body {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            &-catch {
+                font-size: index.$fs-xl;
+                line-height: index.$lh-m;
+                text-align: center;
+            }
+            &-lead {
+                &-baloon {
+                    li {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: index.$spc-xl;
+                        text-align: center;
+                        line-height: 1;
+                        margin: index.$spc-l auto;
+                        background: index.$white;
+                        height: 60px;
+                        border-radius: 30px;
+                        @include m.gener_shadow;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            display: block;
+                            width: 6px;
+                            height: 12px;
+                            right: 40px;
+                            bottom: -8px;
+                            border-top: solid 12px transparent;
+                            border-left: solid 12px transparent;
+                            border-right: solid 12px transparent;
+                            border-bottom: solid 12px index.$white;
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+                &-answer {
+                    font-size: index.$fs-s;
+                    line-height: index.$lh-s;
+                    text-align: center;
+                    @include m.break-sentence;
+                }
+                &-summary {
+                    font-weight: bold;
+                    font-size: index.$fs-l;
+                    line-height: index.$lh-m;
+                    border: solid 1px index.$zouge;
+                    border-radius: 30px;
+                    background: index.$white;
+                    padding: index.$spc-s;
+                    margin: index.$spc-l auto;
+                    text-align: center;
+                    color: index.$b-rurikon;
+                    @include m.gener_shadow;
+                    @include m.break-sentence;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        display: block;
+                        width: 6px;
+                        height: 12px;
+                        left: 40px;
+                        bottom: -12px;
+                        border-top: solid 12px transparent;
+                        border-left: solid 12px transparent;
+                        border-right: solid 12px transparent;
+                        border-bottom: solid 12px index.$white;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(sp) {
+}
+@include m.mq(tab) {
+}
+@include m.mq(pc) {
+    .greeting {
+        background: rgba(index.$y-bgyellow, 0.1);
+        background-blend-mode: multiply;
+        padding-top: index.$spc-l;
+        padding-bottom: index.$spc-l;
+        overflow: hidden;
+        width: 100%;
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-s;
+            padding: index.$spc-l;
+            max-width: index.$maxvw-xxl;
+            width: 100%;
+            margin: auto;
+            .greeting_body {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                &-catch {
+                    font-size: index.$fs-xl;
+                    line-height: index.$lh-m;
+                    text-align: center;
+                }
+                &-lead {
+                    &-baloon {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                        gap: index.$spc-m;
+                        li {
+                            width: 100%;
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            gap: index.$spc-xl;
+                            text-align: center;
+                            line-height: 1;
+                            margin: index.$spc-l auto;
+                            background: index.$white;
+                            height: 60px;
+                            border-radius: 30px;
+                            @include m.gener_shadow;
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                display: block;
+                                width: 6px;
+                                height: 12px;
+                                right: 40px;
+                                bottom: -8px;
+                                border-top: solid 12px transparent;
+                                border-left: solid 12px transparent;
+                                border-right: solid 12px transparent;
+                                border-bottom: solid 12px index.$white;
+                                transform: rotate(45deg);
+                            }
+                        }
+                    }
+                    &-answer {
+                        font-size: index.$fs-l;
+                        line-height: index.$lh-l;
+                        text-align: center;
+                        @include m.break-sentence;
+                    }
+                    &-summary {
+                        font-weight: bold;
+                        font-size: index.$fs-l;
+                        line-height: index.$lh-m;
+                        border: solid 1px index.$zouge;
+                        border-radius: 30px;
+                        background: index.$white;
+                        padding: index.$spc-s;
+                        margin: index.$spc-l auto;
+                        text-align: center;
+                        color: index.$b-rurikon;
+                        @include m.gener_shadow;
+                        @include m.break-sentence;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            display: block;
+                            width: 6px;
+                            height: 12px;
+                            left: 40px;
+                            bottom: -12px;
+                            border-top: solid 12px transparent;
+                            border-left: solid 12px transparent;
+                            border-right: solid 12px transparent;
+                            border-bottom: solid 12px index.$white;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

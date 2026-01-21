@@ -1,0 +1,300 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/************************************************** program */
+/************************************************************/
+@include m.mq(sp) {
+    .information {
+        width: 100%;
+        background: rgba(index.$keycolor-litegray, 0.1);
+        background-blend-mode: multiply;
+        padding-top: index.$spc-l;
+        padding-bottom: index.$spc-l;
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-s;
+            .information_itemlist {
+                display: flex;
+                flex-direction: column;
+                padding: index.$spc-l;
+                &-item {
+                    a {
+                        display: flex;
+                        flex-direction: column;
+                        gap: index.$fspc-xs;
+                        .tmb {
+                            width: 100%;
+                            aspect-ratio: 16/9;
+                            overflow: hidden;
+                            img {
+                                width: 100%;
+                                height: auto;
+                                object-fit: cover;
+                            }
+                        }
+                        .date {
+                            font-size: index.$fs-s;
+                        }
+                        .title {
+                            font-size: index.$fs-l;
+                            font-weight: 700;
+                            padding-bottom: index.$spc-xs;
+                            border-bottom: dotted 1px index.$acc-ngray-07;
+                        }
+                        .body {
+                            font-size: index.$fs-s;
+                            line-height: index.$lh-m;
+                        }
+                        .price {
+                            text-align: center;
+                            font-family: 'Rubik', sans-serif;
+                            font-size: index.$fs-5xl;
+                            line-height: 1;
+                            margin-top: index.$spc-m;
+                            font-weight: bold;
+                        }
+                        .schedule {
+                            text-align: center;
+                            font-weight: bold;
+                            font-size: index.$fs-l;
+                            line-height: 1.5;
+                        }
+                        .comment {
+                            text-align: center;
+                            font-weight: bold;
+                            font-size: index.$fs-l;
+                            line-height: 1.5;
+                        }
+                        .discount {
+                            .title {
+                                text-align: center;
+                                font-size: index.$fs-l;
+                                color: index.$r-beniaka;
+                            }
+                            .contents {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                font-weight: bold;
+                                font-size: index.$fs-l;
+                                gap: index.$spc-m;
+                                .rate {
+                                    font-size: index.$fs-m;
+                                    background: index.$y-nanohana;
+                                    padding: index.$spc-2xs index.$spc-xs;
+                                }
+                                .price {
+                                    font-size: index.$fs-5xl;
+                                    font-family: 'Rubik', sans-serif;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(tab) {
+    .information {
+        background: rgba(index.$keycolor-litegray, 0.1);
+        background-blend-mode: multiply;
+        padding-top: index.$spc-l;
+        padding-bottom: index.$spc-l;
+        width: 100%;
+        &_wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: index.$spc-s;
+            max-width: index.$maxvw-xxl;
+            width: 100%;
+            margin: auto;
+            .information_itemlist {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: index.$spc-s;
+                padding: index.$spc-l;
+                &-item {
+                    a {
+                        display: flex;
+                        flex-direction: column;
+                        gap: index.$fspc-xs;
+                        .tmb {
+                            width: 100%;
+                            aspect-ratio: 16/9;
+                            overflow: hidden;
+                            display: flex;
+                            align-items: center;
+                            img {
+                                width: 100%;
+                                height: auto;
+                                object-fit: cover;
+                            }
+                        }
+                        .date {
+                            font-size: index.$fs-s;
+                        }
+                        .title {
+                            font-size: index.$fs-l;
+                            font-weight: 700;
+                            padding-bottom: index.$spc-xs;
+                            border-bottom: dotted 1px index.$acc-ngray-07;
+                        }
+                        .body {
+                            font-size: index.$fs-s;
+                            line-height: index.$lh-m;
+                        }
+                        .price {
+                            text-align: center;
+                            font-family: 'Rubik', sans-serif;
+                            font-size: index.$fs-5xl;
+                            line-height: 1;
+                            margin-top: index.$spc-m;
+                            font-weight: bold;
+                        }
+                        .schedule {
+                            text-align: center;
+                            font-weight: bold;
+                            font-size: index.$fs-l;
+                            line-height: 1.5;
+                        }
+                        .comment {
+                            text-align: center;
+                            font-weight: bold;
+                            font-size: index.$fs-l;
+                            line-height: 1.5;
+                        }
+                        .discount {
+                            .title {
+                                text-align: center;
+                                font-size: index.$fs-l;
+                                color: index.$r-beniaka;
+                            }
+                            .contents {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                font-weight: bold;
+                                font-size: index.$fs-l;
+                                gap: index.$spc-m;
+                                .rate {
+                                    font-size: index.$fs-m;
+                                    background: index.$y-nanohana;
+                                    padding: index.$spc-2xs index.$spc-xs;
+                                }
+                                .price {
+                                    font-size: index.$fs-5xl;
+                                    font-family: 'Rubik', sans-serif;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include m.mq(pc) {
+    .information {
+        background: rgba(index.$keycolor-litegray, 0.1);
+        background-blend-mode: multiply;
+        padding-top: index.$spc-l;
+        padding-bottom: index.$spc-l;
+        width: 100%;
+        &_wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: index.$spc-s;
+            max-width: index.$maxvw-xxl;
+            width: 100%;
+            margin: auto;
+            .information_itemlist {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(360px, 1fr));
+                gap: index.$spc-m;
+                padding: index.$spc-l;
+                &-item {
+                    a {
+                        display: flex;
+                        flex-direction: column;
+                        gap: index.$fspc-xs;
+                        .tmb {
+                            width: 100%;
+                            aspect-ratio: 16/9;
+                            overflow: hidden;
+                            display: flex;
+                            align-items: center;
+                            img {
+                                width: 100%;
+                                height: auto;
+                                object-fit: cover;
+                            }
+                        }
+                        .date {
+                            font-size: index.$fs-s;
+                        }
+                        .title {
+                            font-size: index.$fs-l;
+                            font-weight: 700;
+                            padding-bottom: index.$spc-xs;
+                            border-bottom: dotted 1px index.$acc-ngray-07;
+                        }
+                        .body {
+                            font-size: index.$fs-s;
+                            line-height: index.$lh-m;
+                        }
+                        .price {
+                            text-align: center;
+                            font-family: 'Rubik', sans-serif;
+                            font-size: index.$fs-5xl;
+                            line-height: 1;
+                            margin-top: index.$spc-m;
+                            font-weight: bold;
+                        }
+                        .schedule {
+                            text-align: center;
+                            font-weight: bold;
+                            font-size: index.$fs-l;
+                            line-height: 1.5;
+                        }
+                        .comment {
+                            text-align: center;
+                            font-weight: bold;
+                            font-size: index.$fs-l;
+                            line-height: 1.5;
+                        }
+                        .discount {
+                            .title {
+                                text-align: center;
+                                font-size: index.$fs-l;
+                                color: index.$r-beniaka;
+                            }
+                            .contents {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                font-weight: bold;
+                                font-size: index.$fs-l;
+                                gap: index.$spc-m;
+                                .rate {
+                                    font-size: index.$fs-m;
+                                    background: index.$y-nanohana;
+                                    padding: index.$spc-2xs index.$spc-xs;
+                                }
+                                .price {
+                                    font-size: index.$fs-5xl;
+                                    font-family: 'Rubik', sans-serif;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

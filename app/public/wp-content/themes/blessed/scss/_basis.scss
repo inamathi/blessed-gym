@@ -1,0 +1,114 @@
+/************************************************************/
+/************************************************* variable */
+/************************************************************/
+/*font-size*/
+$fs-xs: clamp(11px, 1vmin, 13px);
+$fs-s: clamp(13px, 2vmin, 14px);
+$fs-m: clamp(14px, 3vmin, 16px);
+$fs-l: clamp(16px, 4vmin, 18px);
+$fs-xl: clamp(18px, 5vmin, 20px);
+$fs-2xl: clamp(20px, 6vmin, 24px);
+$fs-3xl: clamp(24px, 7vmin, 28px);
+$fs-4xl: clamp(28px, 8vmin, 32px);
+$fs-5xl: clamp(32px, 9vmin, 36px);
+$fs-6xl: clamp(36px, 10vmin, 40px);
+$fs-7xl: clamp(40px, 11vmin, 44px);
+$fs-8xl: clamp(44px, 12vmin, 48px);
+/*fixed spacing*/
+$fspc-m: 20px;
+$fspc-2xs: calc($fspc-m * 0.4);
+$fspc-xs: calc($fspc-m * 0.6);
+$fspc-s: calc($fspc-m * 0.8);
+$fspc-l: calc($fspc-m * 1.2);
+/*spacing*/
+$spc-2xs: clamp(2px, 2vmin, 4px);
+$spc-xs: clamp(4px, 3vmin, 8px);
+$spc-s: clamp(8px, 4vmin, 16px);
+$spc-m: clamp(10px, 5vmin, 20px);
+$spc-l: clamp(15px, 6vmin, 30px);
+$spc-xl: clamp(20px, 7vmin, 40px);
+$spc-2xl: clamp(30px, 8vmin, 50px);
+
+/*color*/
+$keycolor-goldyellow: #fabf14;
+$keycolor-greishyellow: #e4dc8a;
+$keycolor-darkGreishyellow: #715c1f;
+$keycolor-cream: #f5f5d6;
+$keycolor-litegray: #f3f2e9;
+$keycolor-darknavy-00: #111f27;
+$keycolor-darknavy-01: #203744;
+$keycolor-darknavy-02: #3b5d71;
+$acc-ngray-01: #333;
+$acc-ngray-03: #595959;
+$acc-ngray-05: #909090;
+$acc-ngray-07: #cbcbcb;
+$acc-ngray-09: #f7f7f7;
+$acc-usuzumi: #a3a3a2;
+$acc-blue: #38a1db;
+$acc-liteblue: #c1e4e9;
+$acc-orange: #eb6101;
+$acc-red: #d9333f;
+$acc-liteorange: #f6ad49;
+$acc-sakura: #fef4f4;
+$acc-dwgray-00: #433d3c;
+$white: #fff;
+$black: #000;
+$zouge: #f8f4e6;
+$y-zouge: #f8f4e6;
+$y-mushiguri: #ebe1a9;
+$y-tankou: #f8e58c;
+$y-mokuranjiki: #c7b370;
+$y-nanohana: #ffec47;
+$y-ukon: #fabf14;
+$y-uguisucha: #715c1f;
+$yb-wakame: #e0ebaf;
+$yb-wakana: #d8e698;
+$y-bgyellow: #ffd235;
+$b-aijiro: #ebf6f7;
+$b-hisoku: #abced8;
+$b-sorairo: #a0d8ef;
+$b-usuhanada: #507ea4;
+$b-conpeki: #007bbb;
+$b-rurikon: #164a84;
+$b-kachikaeshi: #203744;
+$r-kabairo: #cd5e3c;
+$r-beniaka: #d9333f;
+$bk_kurocha: #583822;
+
+/*radius*/
+$radius-2: 2px;
+$radius-4: 4px;
+$radius-6: 6px;
+$radius-8: 8px;
+$radius-10: 10px;
+$radius-12: 12px;
+/*line-height*/
+$lh-xs: 1.4;
+$lh-s: 1.6;
+$lh-m: 1.8;
+$lh-l: 2;
+$lh-xl: 2.2;
+/*max-width*/
+$maxvw-2xs: 360px;
+$maxvw-xs: 480px;
+$maxvw-s: 640px;
+$maxvw-m: 768px;
+$maxvw-l: 920px;
+$maxvw-xl: 1080px;
+$maxvw-xxl: 1280px;
+/*Icon*/
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 48
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+

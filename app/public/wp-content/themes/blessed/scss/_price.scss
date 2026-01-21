@@ -1,0 +1,1269 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/**************************************************** price */
+/************************************************************/
+@include m.mq(sp) {
+  .price {
+    width: 100%;
+    background: rgba(index.$y-bgyellow, 0.1);
+    background-blend-mode: multiply;
+    padding-top: index.$spc-l;
+    .campaign {
+      display: flex;
+      flex-direction: column;
+      gap: index.$spc-s;
+      background-image: radial-gradient(
+        circle,
+        rgb(255, 247, 142),
+        rgba(255, 242, 58, 1) 50%,
+        rgb(255, 189, 36)
+      );
+      margin: index.$spc-l;
+      padding: 4px 4px index.$spc-m;
+      .item-title {
+        text-align: center;
+        font-size: index.$fs-m;
+        color: index.$white;
+        background: index.$r-beniaka;
+        padding: 10px;
+      }
+      .item-description {
+        text-align: center;
+      }
+      .item-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        &-before {
+          display: flex;
+          align-items: center;
+          &-label {
+            font-weight: 600;
+          }
+          &-unitprice {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            font-family: "Wix Madefor Display", sans-serif;
+
+            font-size: index.$fs-2xl;
+            font-weight: 600;
+            text-decoration: line-through;
+            span {
+              font-size: index.$fs-l;
+              text-decoration: line-through;
+            }
+          }
+        }
+        &-after {
+          border: solid 1px blue;
+          display: flex;
+          align-items: center;
+          &-price {
+            font-family: "Wix Madefor Display", sans-serif;
+
+            font-size: index.$fs-8xl;
+            font-weight: 600;
+            // @include m.gener_shadow;
+            span {
+              font-size: index.$fs-5xl;
+            }
+          }
+        }
+      }
+    }
+    &_wrapper {
+      display: flex;
+      flex-direction: column;
+      padding: index.$spc-l 0 0;
+      .price_body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        &-catch {
+          font-size: index.$fs-xl;
+          line-height: index.$lh-m;
+          text-align: center;
+          @include m.break-sentence;
+        }
+      }
+      .price_list {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 20px;
+        &-athlete {
+          background: rgba(index.$y-mokuranjiki, 0.25);
+        }
+        & > h3 {
+          font-size: clamp(16px, 4vmin, 18px);
+          background: #203744;
+          padding: clamp(8px, 4vmin, 16px);
+          width: 100%;
+          color: #fff;
+          border-radius: 4px;
+          line-height: 1;
+          span {
+            font-size: index.$fs-s;
+            font-weight: normal;
+            color: #fff;
+          }
+        }
+        .item-initial {
+          display: flex;
+          flex-direction: column;
+          padding: index.$spc-s;
+          background: index.$white;
+          gap: index.$spc-m;
+          border-radius: 8px;
+          border: solid 1px index.$keycolor-greishyellow;
+          .item-initial-list {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-s;
+            &-title {
+              display: inline;
+              font-size: index.$fs-s;
+              width: fit-content;
+              border-bottom: solid 2px index.$keycolor-greishyellow;
+              padding-bottom: 3px;
+              margin: auto;
+            }
+            &-item {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+              align-items: center;
+              dt {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                min-width: 180px;
+                text-align: left;
+              }
+              dd {
+                font-family: "Wix Madefor Display", sans-serif;
+
+                text-align: right;
+                font-size: index.$fs-xl;
+              }
+            }
+            &-notice {
+              font-size: index.$fs-s;
+            }
+          }
+          &-campaign {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-s;
+            background: index.$keycolor-greishyellow;
+            padding: index.$spc-xs index.$spc-xs index.$spc-m;
+            h2 {
+              display: grid;
+              place-items: center;
+              font-size: index.$fs-m;
+              background: index.$acc-red;
+              color: index.$white;
+              height: 32px;
+            }
+            h3 {
+              font-size: index.$fs-xl;
+              text-align: center;
+              span {
+                font-size: index.$fs-s;
+                font-weight: normal;
+                color: #fff;
+              }
+            }
+            dl {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              dt {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: index.$fs-m;
+                height: 32px;
+                white-space: nowrap;
+              }
+              div {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                dd {
+                  display: flex;
+                  align-items: center;
+                  height: 32px;
+                }
+                .campaign-price {
+                  font-family: "Wix Madefor Display", sans-serif;
+                  display: flex;
+                  font-size: index.$fs-xl;
+                  height: 32px;
+                  &.discount {
+                    font-family: "Wix Madefor Display", sans-serif;
+                    display: grid;
+                    place-items: center;
+                    font-size: index.$fs-xl;
+                    height: 32px;
+                    background: index.$acc-red;
+                    padding: 0 8px;
+                    border-radius: 4px;
+                    color: index.$white;
+                  }
+                  &.large {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-weight: 600;
+                    font-size: index.$fs-6xl;
+                    span {
+                      display: flex;
+                      align-items: flex-end;
+                      font-size: index.$fs-3xl;
+                      font-weight: inherit;
+                      height: 32px;
+                      line-height: index.$fs-xl;
+                      margin-right: 2.5px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .price_list-item {
+          padding: index.$fs-xl 0;
+          display: flex;
+          flex-direction: column;
+          gap: index.$spc-s;
+          text-align: center;
+          line-height: index.$lh-m;
+          gap: index.$spc-l;
+          width: 100%;
+          //   &.long {
+          //     background: rgba(index.$y-bgyellow, 0.25);
+          //   }
+          .item-title {
+            font-size: index.$fs-2xl;
+            &-rect {
+              font-size: index.$fs-l;
+              background: index.$b-kachikaeshi;
+              padding: index.$spc-s;
+              width: 100%;
+              color: index.$white;
+              border-radius: 4px;
+              span {
+                font-size: index.$fs-s;
+                font-weight: normal;
+                color: #fff;
+              }
+            }
+          }
+          .item-description {
+            line-height: index.$lh-s;
+            &-bottom {
+              line-height: index.$lh-xs;
+            }
+          }
+          .item-block-list {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-m;
+            .item-block {
+              font-family: "Wix Madefor Display", sans-serif;
+
+              display: flex;
+              flex-direction: column;
+              gap: index.$spc-s;
+              text-align: center;
+              line-height: index.$lh-m;
+              gap: index.$spc-s;
+              &-before {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                margin-left: 10vw;
+                gap: 10px;
+                &-unitprice {
+                  font-family: "Wix Madefor Display", sans-serif;
+
+                  span {
+                    font-family: inherit;
+                    margin-left: 5px;
+                  }
+                }
+                &-combine {
+                  font-weight: bold;
+                }
+                &-label {
+                  font-size: index.$fs-m;
+                }
+                &-price {
+                  font-family: "Wix Madefor Display", sans-serif;
+
+                  font-size: index.$fs-6xl;
+                  font-weight: 600;
+                  span {
+                    font-family: inherit;
+                    font-size: index.$fs-2xl;
+                  }
+                }
+                &-times {
+                  font-weight: 600;
+                  font-family: "Wix Madefor Display", sans-serif;
+
+                  span {
+                    font-family: inherit;
+                  }
+                }
+              }
+              &-after {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &-times {
+                  display: flex;
+                  align-items: center;
+                  font-weight: 600;
+                  font-family: "Wix Madefor Display", sans-serif;
+                  height: 44px;
+                  span {
+                    font-family: inherit;
+                    height: 44px;
+                  }
+                }
+                &-arrow {
+                  display: flex;
+                  align-items: center;
+                  font-size: index.$fs-4xl;
+                  height: 44px;
+                }
+                &-price {
+                  display: flex;
+                  align-items: center;
+                  justify-content: flex-end;
+                  font-family: "Wix Madefor Display", sans-serif;
+                  font-size: index.$fs-6xl;
+                  font-weight: 600;
+                  height: 32px;
+                  min-width: 180px;
+                  padding-right: 20px;
+                  // @include m.gener_shadow;
+                  span {
+                    display: flex;
+                    align-items: flex-end;
+                    font-family: inherit;
+                    font-size: index.$fs-3xl;
+                    line-height: index.$fs-2xl;
+                    margin: 0 5px;
+                    height: 32px;
+                  }
+                }
+              }
+              .item_content-minit {
+                text-align: center;
+                font-family: "DM Sans", sans-serif;
+                color: index.$keycolor-darknavy-00;
+              }
+            }
+          }
+          .item_feature {
+            .item_feature-title {
+              text-align: left;
+              font-weight: 600;
+              font-size: index.$fs-s;
+              padding-bottom: 5px;
+              border-bottom: solid 1px index.$keycolor-darkGreishyellow;
+              color: index.$keycolor-darkGreishyellow;
+            }
+            .item_feature-list {
+              ul {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: index.$spc-xs index.$spc-m;
+                li {
+                  display: flex;
+                  align-items: center;
+                  span {
+                    height: 32px;
+                    display: flex;
+                    align-items: center;
+                    text-align: left;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &-answer {
+          line-height: index.$lh-s;
+        }
+        &-summary {
+          font-weight: bold;
+          font-size: index.$fs-l;
+          line-height: index.$lh-m;
+          border: solid 1px index.$zouge;
+          border-radius: 8px;
+          background: index.$white;
+          padding: index.$spc-s;
+          margin: index.$spc-l auto;
+        }
+      }
+    }
+  }
+}
+@include m.mq(tab) {
+  .price {
+    width: 100%;
+    background: rgba(index.$y-bgyellow, 0.1);
+    background-blend-mode: multiply;
+    padding-top: index.$spc-l;
+    .campaign {
+      display: flex;
+      flex-direction: column;
+      gap: index.$spc-s;
+      background-image: radial-gradient(
+        circle,
+        rgb(255, 247, 142),
+        rgba(255, 242, 58, 1) 50%,
+        rgb(255, 189, 36)
+      );
+      margin: index.$spc-l;
+      padding: 4px 4px index.$spc-m;
+      .item-title {
+        text-align: center;
+        font-size: index.$fs-m;
+        color: index.$white;
+        background: index.$r-beniaka;
+        padding: 10px;
+      }
+      .item-description {
+        text-align: center;
+      }
+      .item-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        &-before {
+          display: flex;
+          align-items: center;
+          &-label {
+            font-weight: 600;
+          }
+          &-unitprice {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            font-family: "Wix Madefor Display", sans-serif;
+
+            font-size: index.$fs-2xl;
+            font-weight: 600;
+            text-decoration: line-through;
+            span {
+              font-size: index.$fs-l;
+              text-decoration: line-through;
+            }
+          }
+        }
+        &-after {
+          border: solid 1px blue;
+          display: flex;
+          align-items: center;
+          &-price {
+            font-family: "Wix Madefor Display", sans-serif;
+
+            font-size: index.$fs-8xl;
+            font-weight: 600;
+            // @include m.gener_shadow;
+            span {
+              font-size: index.$fs-5xl;
+            }
+          }
+        }
+      }
+    }
+    &_wrapper {
+      display: flex;
+      flex-direction: column;
+      padding: index.$spc-l 0 0;
+      max-width: index.$maxvw-xxl;
+      width: 100%;
+      margin: auto;
+      .price_body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        &-catch {
+          font-size: index.$fs-xl;
+          line-height: index.$lh-m;
+          text-align: center;
+          @include m.break-sentence;
+        }
+      }
+      .price_list {
+        display: flex;
+        flex-direction: column;
+        &-athlete {
+          background: rgba(index.$y-mokuranjiki, 0.25);
+        }
+        .item-initial {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+          padding: index.$spc-s;
+          background: index.$white;
+          gap: index.$spc-m;
+          border-radius: 8px;
+          border: solid 1px index.$keycolor-greishyellow;
+          .item-initial-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: index.$spc-s;
+            &-title {
+              display: inline;
+              font-size: index.$fs-s;
+              width: fit-content;
+              border-bottom: solid 2px index.$keycolor-greishyellow;
+              padding-bottom: 3px;
+              margin: 0 auto;
+            }
+            &-item {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              dt {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                min-width: 180px;
+                text-align: left;
+              }
+              dd {
+                font-family: "Wix Madefor Display", sans-serif;
+
+                text-align: right;
+                font-size: index.$fs-xl;
+              }
+            }
+            &-notice {
+              font-size: index.$fs-s;
+            }
+          }
+          &-campaign {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-s;
+            background: index.$keycolor-greishyellow;
+            padding: index.$spc-xs index.$spc-xs index.$spc-m;
+            h2 {
+              display: grid;
+              place-items: center;
+              font-size: index.$fs-m;
+              background: index.$acc-red;
+              color: index.$white;
+              height: 32px;
+            }
+            h3 {
+              font-size: index.$fs-xl;
+              text-align: center;
+              span {
+                font-size: index.$fs-s;
+                font-weight: normal;
+                color: #fff;
+              }
+            }
+            dl {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              dt {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: index.$fs-m;
+                height: 32px;
+                white-space: nowrap;
+              }
+              div {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                dd {
+                  display: flex;
+                  align-items: center;
+                  height: 32px;
+                }
+                .campaign-price {
+                  font-family: "Wix Madefor Display", sans-serif;
+                  display: flex;
+                  font-size: index.$fs-xl;
+                  height: 32px;
+                  &.discount {
+                    font-family: "Wix Madefor Display", sans-serif;
+                    display: grid;
+                    place-items: center;
+                    font-size: index.$fs-xl;
+                    height: 32px;
+                    background: index.$acc-red;
+                    padding: 0 8px;
+                    border-radius: 4px;
+                    color: index.$white;
+                  }
+                  &.large {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-weight: 600;
+                    font-size: index.$fs-6xl;
+                    span {
+                      display: flex;
+                      align-items: flex-end;
+                      font-size: index.$fs-3xl;
+                      font-weight: inherit;
+                      height: 32px;
+                      line-height: index.$fs-xl;
+                      margin-right: 2.5px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .price_list-item {
+          padding: index.$fs-xl index.$fs-l;
+          display: flex;
+          flex-direction: column;
+          gap: index.$spc-s;
+          text-align: center;
+          line-height: index.$lh-m;
+          gap: index.$spc-l;
+          width: 100%;
+          //   &.long {
+          //     background: rgba(index.$y-bgyellow, 0.25);
+          //   }
+          .item-title {
+            font-size: index.$fs-2xl;
+            &-rect {
+              font-size: index.$fs-l;
+              background: index.$b-kachikaeshi;
+              padding: index.$spc-s;
+              width: 100%;
+              color: index.$white;
+              border-radius: 4px;
+              span {
+                font-size: index.$fs-s;
+                font-weight: normal;
+                color: #fff;
+              }
+            }
+          }
+          .item-description {
+            line-height: index.$lh-s;
+            &-bottom {
+              line-height: index.$lh-xs;
+            }
+          }
+          .item-block-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: index.$spc-m;
+            .item-block {
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+              font-family: "Wix Madefor Display", sans-serif;
+              line-height: index.$lh-m;
+              gap: index.$spc-s;
+              background: index.$white;
+              border: solid 1px index.$keycolor-greishyellow;
+              border-radius: 8px;
+              padding: index.$spc-m;
+              &-before {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                margin-left: 10vw;
+                gap: 10px;
+                &-unitprice {
+                  font-family: "Wix Madefor Display", sans-serif;
+
+                  span {
+                    font-family: inherit;
+                    margin-left: 5px;
+                  }
+                }
+                &-combine {
+                  font-weight: bold;
+                }
+                &-label {
+                  font-size: index.$fs-m;
+                }
+                &-price {
+                  font-family: "Wix Madefor Display", sans-serif;
+
+                  font-size: index.$fs-6xl;
+                  font-weight: 600;
+                  span {
+                    font-family: inherit;
+                    font-size: index.$fs-2xl;
+                  }
+                }
+                &-times {
+                  font-weight: 600;
+                  font-family: "Wix Madefor Display", sans-serif;
+
+                  span {
+                    font-family: inherit;
+                  }
+                }
+              }
+              &-after {
+                display: grid;
+                grid-template-rows: 32px 50px;
+                grid-template-columns: 25% 75%;
+                &-times {
+                  grid-row: 1 / 2;
+                  grid-column: 1 / 3;
+                  display: flex;
+                  align-items: center;
+                  font-weight: 600;
+                  font-family: "Wix Madefor Display", sans-serif;
+                  height: 24px;
+                  width: fit-content;
+                  background: linear-gradient(
+                    transparent 60%,
+                    index.$keycolor-greishyellow 60%
+                  );
+                }
+                &-arrow {
+                  grid-row: 2 / 3;
+                  grid-column: 1 / 2;
+                  display: flex;
+                  justify-content: flex-end;
+                  align-items: center;
+                  font-size: index.$fs-4xl;
+                }
+                &-price {
+                  grid-row: 2 / 3;
+                  grid-column: 2 / 3;
+                  display: flex;
+                  align-items: center;
+                  font-family: "Wix Madefor Display", sans-serif;
+                  font-size: index.$fs-6xl;
+                  font-weight: 600;
+                  min-width: 180px;
+                  padding-right: 20px;
+                  // @include m.gener_shadow;
+                  span {
+                    font-size: index.$fs-3xl;
+                    line-height: index.$fs-2xl;
+                    position: relative;
+                    top: 5px;
+                    margin: 0 5px;
+                  }
+                }
+              }
+              .item_content-minit {
+                text-align: center;
+                font-family: "DM Sans", sans-serif;
+                color: index.$keycolor-darknavy-00;
+              }
+            }
+          }
+          .item_feature {
+            .item_feature-title {
+              text-align: left;
+              font-weight: 600;
+              font-size: index.$fs-s;
+              padding-bottom: 5px;
+              border-bottom: solid 1px index.$keycolor-darkGreishyellow;
+              color: index.$keycolor-darkGreishyellow;
+            }
+            .item_feature-list {
+              ul {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: index.$spc-xs index.$spc-m;
+                li {
+                  display: flex;
+                  align-items: center;
+                  span {
+                    height: 32px;
+                    display: flex;
+                    align-items: center;
+                    text-align: left;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &-answer {
+          line-height: index.$lh-s;
+        }
+        &-summary {
+          font-weight: bold;
+          font-size: index.$fs-l;
+          line-height: index.$lh-m;
+          border: solid 1px index.$zouge;
+          border-radius: 8px;
+          background: index.$white;
+          padding: index.$spc-s;
+          margin: index.$spc-l auto;
+        }
+      }
+    }
+  }
+}
+@include m.mq(pc) {
+  .price {
+    width: 100%;
+    background: rgba(index.$y-bgyellow, 0.1);
+    background-blend-mode: multiply;
+    padding-top: index.$spc-l;
+    padding-bottom: index.$spc-l;
+    .campaign {
+      display: flex;
+      flex-direction: column;
+      gap: index.$spc-s;
+      background-image: radial-gradient(
+        circle,
+        rgb(255, 247, 142),
+        rgba(255, 242, 58, 1) 50%,
+        rgb(255, 189, 36)
+      );
+      margin: index.$spc-l;
+      padding: 4px 4px index.$spc-m;
+      .item-title {
+        text-align: center;
+        font-size: index.$fs-m;
+        color: index.$white;
+        background: index.$r-beniaka;
+        padding: 10px;
+      }
+      .item-description {
+        text-align: center;
+      }
+      .item-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        &-before {
+          display: flex;
+          align-items: center;
+          &-label {
+            font-weight: 600;
+          }
+          &-unitprice {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            font-family: "Wix Madefor Display", sans-serif;
+
+            font-size: index.$fs-2xl;
+            font-weight: 600;
+            text-decoration: line-through;
+            span {
+              font-size: index.$fs-l;
+              text-decoration: line-through;
+            }
+          }
+        }
+        &-after {
+          border: solid 1px blue;
+          display: flex;
+          align-items: center;
+          &-price {
+            font-family: "Wix Madefor Display", sans-serif;
+
+            font-size: index.$fs-8xl;
+            font-weight: 600;
+            // @include m.gener_shadow;
+            span {
+              font-size: index.$fs-5xl;
+            }
+          }
+        }
+      }
+    }
+    &_wrapper {
+      display: flex;
+      flex-direction: column;
+      padding: index.$spc-l 0 0;
+      max-width: index.$maxvw-xxl;
+      width: 100%;
+      margin: auto;
+      .price_body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        &-catch {
+          font-size: index.$fs-xl;
+          line-height: index.$lh-m;
+          text-align: center;
+          @include m.break-sentence;
+          padding: 40px 0 10px;
+        }
+      }
+      .price_list {
+        display: flex;
+        flex-direction: column;
+        gap: index.$spc-m;
+        &-athlete {
+          background: rgba(index.$y-mokuranjiki, 0.25);
+        }
+        & > h3 {
+          font-size: clamp(16px, 4vmin, 18px);
+          background: #203744;
+          padding: clamp(8px, 4vmin, 16px);
+          width: 100%;
+          color: #fff;
+          border-radius: 4px;
+          line-height: 1;
+          text-align: center;
+          span {
+            font-size: index.$fs-s;
+            font-weight: normal;
+            color: #fff;
+          }
+        }
+        .item-initial {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+          padding: index.$spc-s;
+          background: index.$white;
+          gap: index.$spc-m;
+          border-radius: 8px;
+          border: solid 1px index.$keycolor-greishyellow;
+          .item-initial-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: index.$spc-s;
+            &-title {
+              display: inline;
+              font-size: index.$fs-m;
+              width: fit-content;
+              margin: 0 auto;
+              font-weight: 600;
+              font-family: "Wix Madefor Display", sans-serif;
+              height: 24px;
+              width: fit-content;
+              background: linear-gradient(transparent 60%, #e4dc8a 60%);
+            }
+            &-item {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              dt {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                min-width: 180px;
+                text-align: left;
+              }
+              dd {
+                font-family: "Wix Madefor Display", sans-serif;
+
+                text-align: right;
+                font-size: index.$fs-xl;
+              }
+            }
+            &-notice {
+              font-size: index.$fs-s;
+            }
+          }
+          &-campaign {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-s;
+            background: index.$keycolor-greishyellow;
+            padding: index.$spc-xs index.$spc-xs index.$spc-m;
+            h2 {
+              display: grid;
+              place-items: center;
+              font-size: index.$fs-m;
+              background: index.$acc-red;
+              color: index.$white;
+              height: 32px;
+            }
+            h3 {
+              font-size: index.$fs-xl;
+              text-align: center;
+              span {
+                font-size: index.$fs-s;
+                font-weight: normal;
+                color: #fff;
+              }
+            }
+            dl {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              dt {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: index.$fs-m;
+                height: 32px;
+                white-space: nowrap;
+              }
+              div {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                dd {
+                  display: flex;
+                  align-items: center;
+                  height: 32px;
+                }
+                .campaign-price {
+                  font-family: "Wix Madefor Display", sans-serif;
+                  display: flex;
+                  font-size: index.$fs-xl;
+                  height: 32px;
+                  &.discount {
+                    font-family: "Wix Madefor Display", sans-serif;
+                    display: grid;
+                    place-items: center;
+                    font-size: index.$fs-xl;
+                    height: 32px;
+                    background: index.$acc-red;
+                    padding: 0 8px;
+                    border-radius: 4px;
+                    color: index.$white;
+                  }
+                  &.large {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-weight: 600;
+                    font-size: index.$fs-6xl;
+                    span {
+                      display: flex;
+                      align-items: flex-end;
+                      font-size: index.$fs-3xl;
+                      font-weight: inherit;
+                      height: 32px;
+                      line-height: index.$fs-xl;
+                      margin-right: 2.5px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .price_list-item {
+          //   padding: index.$fs-xl index.$fs-l;
+          display: flex;
+          flex-direction: column;
+          gap: index.$spc-s;
+          text-align: center;
+          line-height: index.$lh-m;
+          gap: index.$spc-l;
+          width: 100%;
+          //   &.long {
+          //     background: rgba(index.$y-bgyellow, 0.25);
+          //   }
+          .item-title {
+            font-size: index.$fs-2xl;
+            &-rect {
+              font-size: index.$fs-l;
+              background: index.$b-kachikaeshi;
+              padding: index.$spc-s;
+              width: 100%;
+              color: index.$white;
+              border-radius: 4px;
+              line-height: 1;
+              span {
+                font-size: index.$fs-s;
+                font-weight: normal;
+                color: #fff;
+              }
+            }
+          }
+          .session-desc {
+            font-size: index.$fs-xl;
+            color: index.$b-kachikaeshi;
+            font-weight: 600;
+          }
+          .item-description {
+            line-height: index.$lh-s;
+            &-bottom {
+              line-height: index.$lh-xs;
+            }
+          }
+          .item-block-list {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: index.$spc-m;
+            .item-block {
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+              font-family: "Wix Madefor Display", sans-serif;
+              line-height: index.$lh-m;
+              gap: index.$spc-s;
+              background: index.$white;
+              border: solid 1px index.$keycolor-greishyellow;
+              border-radius: 8px;
+              padding: index.$spc-m;
+              &-before {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                margin-left: 10vw;
+                gap: 10px;
+                &-unitprice {
+                  font-family: "Wix Madefor Display", sans-serif;
+
+                  span {
+                    font-family: inherit;
+                    margin-left: 5px;
+                  }
+                }
+                &-combine {
+                  font-weight: bold;
+                }
+                &-label {
+                  font-size: index.$fs-m;
+                }
+                &-price {
+                  font-family: "Wix Madefor Display", sans-serif;
+
+                  font-size: index.$fs-6xl;
+                  font-weight: 600;
+                  span {
+                    font-family: inherit;
+                    font-size: index.$fs-2xl;
+                  }
+                }
+                &-times {
+                  font-weight: 600;
+                  font-family: "Wix Madefor Display", sans-serif;
+
+                  span {
+                    font-family: inherit;
+                  }
+                }
+              }
+              &-after {
+                display: grid;
+                grid-template-rows: 32px 50px;
+                grid-template-columns: 25% 75%;
+                &-times {
+                  grid-row: 1 / 2;
+                  grid-column: 1 / 3;
+                  display: flex;
+                  align-items: center;
+                  font-weight: 600;
+                  font-family: "Wix Madefor Display", sans-serif;
+                  height: 24px;
+                  width: fit-content;
+                  background: linear-gradient(
+                    transparent 60%,
+                    index.$keycolor-greishyellow 60%
+                  );
+                }
+                &-arrow {
+                  grid-row: 2 / 3;
+                  grid-column: 1 / 2;
+                  display: flex;
+                  justify-content: flex-end;
+                  align-items: center;
+                  font-size: index.$fs-4xl;
+                }
+                &-price {
+                  grid-row: 2 / 3;
+                  grid-column: 2 / 3;
+                  display: flex;
+                  align-items: center;
+                  font-family: "Wix Madefor Display", sans-serif;
+                  font-size: index.$fs-6xl;
+                  font-weight: 600;
+                  min-width: 180px;
+                  padding-right: 20px;
+                  // @include m.gener_shadow;
+                  span {
+                    font-size: index.$fs-3xl;
+                    line-height: index.$fs-2xl;
+                    position: relative;
+                    top: 5px;
+                    margin: 0 5px;
+                  }
+                }
+              }
+              .item_content-minit {
+                text-align: center;
+                font-family: "DM Sans", sans-serif;
+                color: index.$keycolor-darknavy-00;
+              }
+            }
+          }
+          .item_feature {
+            .item_feature-title {
+              text-align: left;
+              font-weight: 600;
+              font-size: index.$fs-s;
+              padding-bottom: 5px;
+              border-bottom: solid 1px index.$keycolor-darkGreishyellow;
+              color: index.$keycolor-darkGreishyellow;
+            }
+            .item_feature-list {
+              ul {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: index.$spc-xs index.$spc-m;
+                li {
+                  display: flex;
+                  align-items: center;
+                  span {
+                    height: 32px;
+                    display: flex;
+                    align-items: center;
+                    text-align: left;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &-answer {
+          line-height: index.$lh-s;
+        }
+        &-summary {
+          font-weight: bold;
+          font-size: index.$fs-l;
+          line-height: index.$lh-m;
+          border: solid 1px index.$zouge;
+          border-radius: 8px;
+          background: index.$white;
+          padding: index.$spc-s;
+          margin: index.$spc-l auto;
+        }
+      }
+    }
+  }
+}

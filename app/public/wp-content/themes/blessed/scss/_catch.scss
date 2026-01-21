@@ -1,0 +1,281 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/**************************************************** catch */
+/************************************************************/
+@include m.mq(sp) {
+    .catch {
+        width: 100%;
+        padding: index.$spc-xl index.$spc-m index.$spc-2xl;
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            max-width: index.$maxvw-m;
+            gap: index.$spc-l;
+            margin: auto;
+            .catch_title {
+                text-align: center;
+                font-size: 1.125rem;
+                color: index.$r-beniaka;
+            }
+            .catch_benefitlist {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: index.$spc-xs;
+                &-item {
+                    display: flex;
+                    flex-direction: row;
+                    gap: index.$fspc-xs;
+                    align-items: center;
+                    .label {
+                        background: index.$y-nanohana;
+                        font-weight: bold;
+                        font-size: index.$fs-s;
+                        width: 80px;
+                        text-align: center;
+                        padding: 4px;
+                    }
+                    .price {
+                        font-family: 'Rubik', sans-serif;
+                        font-weight: 600;
+                        &.small {
+                            font-size: index.$fs-3xl;
+                            font-weight: 600;
+                            span {
+                                font-weight: bold;
+                                font-size: index.$fs-3xl;
+                                font-weight: 600;
+                            }
+                        }
+                        &.large {
+                            font-size: index.$fs-5xl;
+                            font-weight: 600;
+                            span {
+                                font-weight: bold;
+                                font-size: index.$fs-3xl;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+            }
+            .catch_info {
+                width: 100%;
+                dt {
+                    display: block;
+                    font-size: index.$fs-l;
+                    font-weight: bold;
+                    border: solid 1px index.$r-beniaka;
+                    background: index.$r-beniaka;
+                    text-align: center;
+                    color: white;
+                    padding: index.$spc-xs;
+                }
+                dd {
+                    border: solid 1px index.$r-beniaka;
+                    background: index.$acc-sakura;
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        gap: index.$spc-xs;
+                        padding: index.$spc-m 0;
+                        li {
+                            font-weight: bold;
+                            text-align: center;
+                            span {
+                                font-family: 'Rubik', sans-serif;
+                                font-size: index.$fs-3xl;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(tab) {
+    .catch {
+        width: 100%;
+        padding: index.$spc-xl 0 index.$spc-2xl;
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            max-width: index.$maxvw-m;
+            gap: index.$spc-l;
+            margin: auto;
+            .catch_title {
+                text-align: center;
+                font-size: index.$fs-2xl;
+                color: index.$r-beniaka;
+            }
+            .catch_benefitlist {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: index.$spc-m;
+                &-item {
+                    display: flex;
+                    flex-direction: row;
+                    gap: index.$fspc-l;
+                    align-items: center;
+                    .label {
+                        background: index.$y-nanohana;
+                        font-weight: bold;
+                        font-size: index.$fs-m;
+                        width: 80px;
+                        text-align: center;
+                        padding: 4px;
+                    }
+                    .price {
+                        font-family: 'Rubik', sans-serif;
+                        font-weight: 600;
+                        &.small {
+                            font-size: index.$fs-5xl;
+                            font-weight: 600;
+                            span {
+                                font-weight: 600;
+                                font-size: index.$fs-3xl;
+                            }
+                        }
+                        &.large {
+                            font-size: index.$fs-6xl;
+                            font-weight: 600;
+                            span {
+                                font-weight: 600;
+                                font-size: index.$fs-3xl;
+                            }
+                        }
+                    }
+                }
+            }
+            .catch_info {
+                width: 100%;
+                max-width: index.$maxvw-xs;
+                margin: auto;
+                dt {
+                    display: block;
+                    font-size: index.$fs-l;
+                    font-weight: bold;
+                    border: solid 1px index.$r-beniaka;
+                    background: index.$r-beniaka;
+                    text-align: center;
+                    color: white;
+                    padding: index.$spc-xs;
+                }
+                dd {
+                    border: solid 1px index.$r-beniaka;
+                    background: index.$acc-sakura;
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        gap: index.$spc-xs;
+                        padding: index.$spc-m 0;
+                        li {
+                            font-weight: bold;
+                            text-align: center;
+                            span {
+                                font-family: 'Rubik', sans-serif;
+                                font-size: index.$fs-3xl;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(pc) {
+    .catch {
+        width: 100%;
+        padding: index.$spc-xl 0 index.$spc-2xl;
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            max-width: index.$maxvw-m;
+            gap: index.$spc-l;
+            margin: auto;
+            .catch_title {
+                text-align: center;
+                font-size: index.$fs-2xl;
+                color: index.$r-beniaka;
+            }
+            .catch_benefitlist {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: index.$spc-m;
+                &-item {
+                    display: flex;
+                    flex-direction: row;
+                    gap: index.$fspc-l;
+                    align-items: center;
+                    .label {
+                        background: index.$y-nanohana;
+                        font-weight: bold;
+                        font-size: index.$fs-m;
+                        width: 80px;
+                        text-align: center;
+                        padding: 4px;
+                    }
+                    .price {
+                        font-family: 'Rubik', sans-serif;
+                        font-weight: 600;
+                        &.small {
+                            font-size: index.$fs-5xl;
+                            font-weight: 600;
+                            span {
+                                font-weight: 600;
+                                font-size: index.$fs-3xl;
+                            }
+                        }
+                        &.large {
+                            font-size: index.$fs-6xl;
+                            font-weight: 600;
+                            span {
+                                font-weight: 600;
+                                font-size: index.$fs-3xl;
+                            }
+                        }
+                    }
+                }
+            }
+            .catch_info {
+                width: 100%;
+                max-width: index.$maxvw-s;
+                margin: auto;
+                dt {
+                    display: block;
+                    font-size: index.$fs-l;
+                    font-weight: bold;
+                    border: solid 1px index.$r-beniaka;
+                    background: index.$r-beniaka;
+                    text-align: center;
+                    color: white;
+                    padding: index.$spc-xs;
+                }
+                dd {
+                    border: solid 1px index.$r-beniaka;
+                    background: index.$acc-sakura;
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        gap: index.$spc-xs;
+                        padding: index.$spc-m 0;
+                        li {
+                            font-weight: bold;
+                            text-align: center;
+                            span {
+                                font-family: 'Rubik', sans-serif;
+                                font-size: index.$fs-3xl;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

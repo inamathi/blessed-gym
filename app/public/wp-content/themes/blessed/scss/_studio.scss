@@ -1,0 +1,234 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/*************************************************** studio */
+/************************************************************/
+@include m.mq(sp) {
+    .studio {
+        width: 100%;
+        background: rgba(rgb(209, 176, 255), 0.25);
+        background-blend-mode: multiply;
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-m;
+            padding: index.$spc-m;
+            .studio_itemlist {
+                display: flex;
+                flex-direction: column;
+                gap: index.$spc-xl;
+                &-item {
+                    display: flex;
+                    flex-direction: column;
+                    gap: index.$spc-m;
+                    .studio-split {
+                        display: flex;
+                        justify-content: space-between;
+                        gap: index.$spc-m;
+                        & > * {
+                            flex: 1;
+                        }
+                        dl {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            gap: index.$spc-m;
+                            dt {
+                                font-weight: bold;
+                                font-size: index.$fs-l;
+                            }
+                            dd {
+                                font-size: index.$fs-s;
+                                line-height: index.$lh-m;
+                                strong {
+                                    display: block;
+                                    color: index.$r-beniaka;
+                                    padding: 4px;
+                                    border: solid 1px index.$r-beniaka;
+                                    text-align: center;
+                                    margin-top: index.$spc-xs;
+                                }
+                            }
+                        }
+                    }
+                    .studio-map {
+                        border: solid 1px index.$acc-ngray-07;
+                        iframe {
+                            width: 100%;
+                            aspect-ratio: 4 / 3;
+                        }
+                    }
+                    .charm {
+                        position: relative;
+                        top: -10px;
+                        text-align: center;
+                        font-size: index.$fs-l;
+                        font-weight: bold;
+                        color: index.$r-beniaka;
+                        background: white;
+                        border: solid 2px index.$r-beniaka;
+                        padding: index.$spc-s;
+                        span {
+                            font-size: index.$fs-xl;
+                            color: index.$r-beniaka;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(tab) {
+    .studio {
+        width: 100%;
+        background: rgba(rgb(209, 176, 255), 0.25);
+        background-blend-mode: multiply;
+        padding: index.$spc-xl 0 index.$spc-2xl;
+        &_wrapper {
+            max-width: index.$maxvw-m;
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-l;
+            margin: auto;
+            .studio_itemlist {
+                display: flex;
+                flex-direction: row;
+                gap: index.$spc-xl;
+                &-item {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: index.$spc-m;
+                    .studio-split {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        gap: index.$spc-m;
+                        & > * {
+                            flex: 1;
+                        }
+                        dl {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            gap: index.$spc-m;
+                            dt {
+                                font-weight: bold;
+                                font-size: index.$fs-l;
+                            }
+                            dd {
+                                font-size: index.$fs-s;
+                                line-height: index.$lh-s;
+                                strong {
+                                    display: block;
+                                    color: index.$r-beniaka;
+                                    padding: 4px;
+                                    border: solid 1px index.$r-beniaka;
+                                    text-align: center;
+                                    margin-top: index.$spc-xs;
+                                }
+                            }
+                        }
+                    }
+                    .studio-map {
+                        border: solid 1px index.$acc-ngray-07;
+                        iframe {
+                            width: 100%;
+                            aspect-ratio: 4 / 3;
+                        }
+                    }
+                    .charm {
+                        text-align: center;
+                        font-size: index.$fs-l;
+                        font-weight: bold;
+                        color: index.$r-beniaka;
+                        background: white;
+                        border: solid 2px index.$r-beniaka;
+                        padding: index.$spc-s;
+                        span {
+                            font-size: index.$fs-xl;
+                            color: index.$r-beniaka;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(pc) {
+    .studio {
+        width: 100%;
+        background: rgba(rgb(209, 176, 255), 0.25);
+        background-blend-mode: multiply;
+        padding: index.$spc-xl 0 index.$spc-2xl;
+        &_wrapper {
+            max-width: index.$maxvw-xl;
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-l;
+            margin: auto;
+            .studio_itemlist {
+                display: flex;
+                flex-direction: row;
+                gap: index.$spc-xl;
+                &-item {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: index.$spc-m;
+                    .studio-split {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        gap: index.$spc-m;
+                        & > * {
+                            flex: 1;
+                        }
+                        dl {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            gap: index.$spc-m;
+                            dt {
+                                font-weight: bold;
+                                font-size: index.$fs-l;
+                            }
+                            dd {
+                                font-size: index.$fs-s;
+                                line-height: index.$lh-s;
+                                strong {
+                                    display: block;
+                                    color: index.$r-beniaka;
+                                    padding: 4px;
+                                    border: solid 1px index.$r-beniaka;
+                                    text-align: center;
+                                    margin-top: index.$spc-xs;
+                                }
+                            }
+                        }
+                    }
+                    .studio-map {
+                        border: solid 1px index.$acc-ngray-07;
+                        iframe {
+                            width: 100%;
+                            aspect-ratio: 4 / 3;
+                        }
+                    }
+                    .charm {
+                        text-align: center;
+                        font-size: index.$fs-l;
+                        font-weight: bold;
+                        color: index.$r-beniaka;
+                        background: white;
+                        border: solid 2px index.$r-beniaka;
+                        padding: index.$spc-s;
+                        span {
+                            font-size: index.$fs-xl;
+                            color: index.$r-beniaka;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

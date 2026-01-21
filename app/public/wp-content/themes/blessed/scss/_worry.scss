@@ -1,0 +1,41 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/*************************************************** worry */
+/************************************************************/
+
+.worry {
+  background: rgba(255, 210, 53, 0.1);
+  background-blend-mode: multiply;
+  padding-top: clamp(15px, 6vmin, 30px);
+  padding-bottom: clamp(15px, 6vmin, 30px);
+  overflow: hidden;
+  width: 100%;
+  .worry_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(8px, 4vmin, 16px);
+    padding: clamp(15px, 6vmin, 30px);
+    max-width: 1280px;
+    width: 100%;
+    margin: auto;
+    .worry_list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      li {
+        padding: clamp(8px, 4vmin, 16px);
+        text-align: center;
+        background: #fff;
+        border-radius: 8px;
+        border: solid 1px rgba(255, 210, 53, 0.5);
+        filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.3));
+      }
+    }
+  }
+  h2 {
+    text-align: center;
+    line-height: 1.5;
+    margin-top: clamp(10px, 5vmin, 20px);
+  }
+}

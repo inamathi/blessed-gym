@@ -1,0 +1,38 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/*************************************************** search */
+/************************************************************/
+.search-form {
+    position: relative;
+    input[type="text"] {
+        padding: 8px 16px;
+        border-radius: 4px;
+        font-size: index.$fs-m;
+        height: calc(1rem + 8px);
+        background: white;
+        border: solid 2px rgba(index.$keycolor-greishyellow, 0.5);
+        border-radius: 4px;
+        height: 44px;
+        width: 100%;
+        &:focus {
+            border: solid 2px rgba(index.$b-hisoku, 1);
+            background: rgba(white, 1);
+        }
+    }
+    .search-btn {
+        cursor: pointer;
+        position: absolute;
+        right: 6px;
+        top: 4px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        &:hover {
+            background: rgba(index.$acc-blue, 0.1);
+        }
+        &:active {
+            background: rgba(index.$acc-blue, 0.3);
+        }
+    }
+}

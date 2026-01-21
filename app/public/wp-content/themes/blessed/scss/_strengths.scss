@@ -1,0 +1,358 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/************************************************** strengths */
+/************************************************************/
+@include m.mq(sp) {
+    .strengths {
+        width: 100%;
+        background: rgba(index.$keycolor-litegray, 0.25);
+        background-blend-mode: multiply;
+        padding-top: index.$spc-l;
+        padding-bottom: index.$spc-l;
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-s;
+            padding: index.$spc-l;
+            .strengths_figure {
+                img {
+                    margin: auto;
+                }
+            }
+            .strengths_bnrlist {
+                display: flex;
+                flex-direction: column;
+                gap: index.$spc-m;
+                &-item {
+                    border: solid 1px index.$keycolor-greishyellow;
+                    background: index.$keycolor-cream;
+                    border-radius: 8px;
+                    filter: drop-shadow(2px 2px 2px rgba(index.$b-hisoku,0.4));
+                    a {
+                        display: flex;
+                        flex-direction: column;
+                        gap: index.$spc-s;
+                        padding: index.$spc-m index.$spc-l;
+                        border-radius: 8px;
+                        h4 {
+                            font-weight: 600;
+                            font-size: index.$fs-s;
+                        }
+                        dl {
+                            display: flex;
+                            flex-direction: column;
+                            gap: index.$spc-m;
+                            dt {
+                                font-weight: 600;
+                                font-size: index.$fs-xl;
+                                line-height: index.$lh-xs;
+                                text-align: center;
+                            }
+                            dd {
+                                font-weight: 600;
+                                padding: 5px;
+                                background: index.$white;
+                                text-align: center;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .strengths_body {
+                display: flex;
+                flex-direction: column;
+                gap: index.$spc-l;
+                &-catch {
+                    font-size: index.$fs-xl;
+                    line-height: index.$lh-s;
+                    text-align: center;
+                    @include m.break-sentence;
+                }
+                &-contents {
+                    display: flex;
+                    flex-direction: column;
+                    gap: index.$spc-m;
+                    &-item {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        figure {
+                            max-height: 300px;
+                            img {
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+                &-lead {
+                    display: flex;
+                    flex-direction: column;
+                    gap: index.$spc-l;
+                    font-weight: bold;
+                    font-size: index.$fs-l;
+                    line-height: index.$lh-m;
+                    text-align: center;
+                    @include m.break-sentence;
+                    li {
+                        font-weight: bold;
+                        font-size: index.$fs-l;
+                        line-height: index.$lh-s;
+                        text-align: center;
+                        @include m.break-sentence;
+                        span {
+                            display: block;
+                            line-height: index.$lh-m;
+                        }
+                    }
+                }
+                &-summary {
+                    p {
+                        line-height: index.$lh-s;
+                    }
+                    h3 {
+                        font-weight: bold;
+                        font-size: index.$fs-l;
+                        line-height: index.$lh-m;
+                        border: solid 1px index.$zouge;
+                        border-radius: 8px;
+                        background: index.$white;
+                        padding: index.$spc-s;
+                        margin: index.$spc-l auto;
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(tab) {
+    .strengths {
+        width: 100%;
+        background: rgba(index.$keycolor-litegray, 0.25);
+        background-blend-mode: multiply;
+        padding-top: index.$spc-l;
+        padding-bottom: index.$spc-l;
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-s;
+            padding: index.$spc-l;
+            .strengths_figure {
+                img {
+                    margin: auto;
+                }
+            }
+            .strengths_bnrlist {
+                display: flex;
+                flex-direction: column;
+                gap: index.$spc-m;
+                &-item {
+                    border: solid 1px index.$keycolor-greishyellow;
+                    background: index.$keycolor-cream;
+                    border-radius: 8px;
+                    filter: drop-shadow(2px 2px 2px rgba(index.$b-hisoku,0.4));
+                    a {
+                        display: flex;
+                        flex-direction: column;
+                        gap: index.$spc-s;
+                        padding: index.$spc-m index.$spc-l;
+                        border-radius: 8px;
+                        h4 {
+                            font-weight: 600;
+                            font-size: index.$fs-s;
+                        }
+                        dl {
+                            display: flex;
+                            flex-direction: column;
+                            gap: index.$spc-m;
+                            dt {
+                                font-weight: 600;
+                                font-size: index.$fs-xl;
+                                line-height: index.$lh-xs;
+                                text-align: center;
+                            }
+                            dd {
+                                font-weight: 600;
+                                padding: 5px;
+                                background: index.$white;
+                                text-align: center;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .strengths_body {
+                display: flex;
+                flex-direction: column;
+                gap: index.$spc-l;
+                &-catch {
+                    font-size: index.$fs-xl;
+                    line-height: index.$lh-s;
+                    text-align: center;
+                    @include m.break-sentence;
+                }
+                &-contents {
+                    display: flex;
+                    flex-direction: column;
+                    gap: index.$spc-m;
+                    &-item {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        figure {
+                            max-width: 66%;
+                            margin: auto;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                &-lead {
+                    display: flex;
+                    flex-direction: column;
+                    gap: index.$spc-l;
+                    font-weight: bold;
+                    font-size: index.$fs-l;
+                    line-height: index.$lh-m;
+                    text-align: center;
+                    @include m.break-sentence;
+                    li {
+                        font-weight: bold;
+                        font-size: index.$fs-l;
+                        line-height: index.$lh-s;
+                        text-align: center;
+                        @include m.break-sentence;
+                        span {
+                            display: block;
+                            line-height: index.$lh-m;
+                        }
+                    }
+                }
+                &-summary {
+                    p {
+                        line-height: index.$lh-s;
+                    }
+                    h3 {
+                        font-weight: bold;
+                        font-size: index.$fs-l;
+                        line-height: index.$lh-m;
+                        border: solid 1px index.$zouge;
+                        border-radius: 8px;
+                        background: index.$white;
+                        padding: index.$spc-s;
+                        margin: index.$spc-l auto;
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(pc) {
+    .strengths {
+        width: 100%;
+        background: rgba(index.$keycolor-litegray, 0.25);
+        background-blend-mode: multiply;
+        padding-top: index.$spc-l;
+        padding-bottom: index.$spc-l;
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-s;
+            padding: index.$spc-l;
+            max-width: index.$maxvw-xxl;
+            margin: auto;
+            .strengths_bnrlist {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(100px, 1fr));
+                gap: index.$spc-m;
+                &-item {
+                    border: solid 1px index.$keycolor-greishyellow;
+                    background: index.$keycolor-cream;
+                    border-radius: 8px;
+                    filter: drop-shadow(2px 2px 2px rgba(index.$b-hisoku,0.4));
+                    a {
+                        display: flex;
+                        flex-direction: column;
+                        gap: index.$spc-s;
+                        padding: index.$spc-m index.$spc-l;
+                        border-radius: 8px;
+                        h4 {
+                            font-weight: 600;
+                            font-size: index.$fs-s;
+                        }
+                        dl {
+                            display: flex;
+                            flex-direction: column;
+                            gap: index.$spc-m;
+                            dt {
+                                font-weight: 600;
+                                font-size: index.$fs-xl;
+                                line-height: index.$lh-xs;
+                                text-align: center;
+                            }
+                            dd {
+                                font-weight: 600;
+                                padding: 5px;
+                                background: index.$white;
+                                text-align: center;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .strengths_body {
+                display: flex;
+                flex-direction: column;
+                gap: index.$spc-l;
+                &-catch {
+                    font-size: index.$fs-xl;
+                    line-height: index.$lh-s;
+                    text-align: center;
+                    @include m.break-sentence;
+                }
+                &-contents {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                    &-item {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        figure {
+                            max-height: 300px;
+                            img {
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+                &-lead {
+                    display: grid;
+                    place-items: center;
+                    gap: index.$spc-l;
+                    font-weight: bold;
+                    font-size: index.$fs-l;
+                    line-height: index.$lh-m;
+                    text-align: center;
+                    min-height: 150px;
+                    @include m.break-sentence;
+                }
+                &-summary {
+                    p {
+                        line-height: index.$lh-s;
+                    }
+                    h3 {
+                        font-weight: bold;
+                        font-size: index.$fs-l;
+                        line-height: index.$lh-m;
+                        border: solid 1px index.$zouge;
+                        border-radius: 8px;
+                        background: index.$white;
+                        padding: index.$spc-s;
+                        margin: index.$spc-l auto;
+                    }
+                }
+            }
+        }
+    }
+}

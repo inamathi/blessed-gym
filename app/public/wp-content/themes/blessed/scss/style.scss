@@ -1,0 +1,244 @@
+@use "index";
+@use "mixin" as m;
+/* general */
+@use "gsap";
+@use "swiper";
+@use "heading";
+@use "header-mobile";
+@use "header-wide";
+@use "slick";
+@use "pagenation";
+@use "parts";
+@use "footer";
+@use "worry";
+
+/* greetng */
+@use "greeting";
+/* concept */
+@use "concept";
+/* price */
+@use "price";
+/* option */
+@use "option";
+/* gyminfo */
+@use "gyminfo";
+/* topics */
+@use "blog";
+/* strengths */
+@use "strengths";
+/* Q and A */
+@use "inquiry";
+/* form */
+@use "form";
+
+/* page-pricing */
+@use "page-pricing";
+/* page-strength */
+@use "page-strengths";
+
+/* component */
+@use "component_campaign";
+
+/* top */
+@use "hero";
+@use "catch";
+@use "studio";
+@use "recommend";
+@use "information";
+@use "staff";
+@use "program";
+@use "qanda";
+@use "footer-sticky";
+@use "cta";
+/* single page */
+@use "single";
+@use "sidebar";
+/* archive page */
+@use "archive";
+@use "listpage";
+@use "listpage-staff";
+/* search form */
+@use "search";
+
+/************************************************************/
+/************************************************** general */
+/************************************************************/
+* {
+  font-family: "IBM Plex Sans JP", sans-serif;
+  color: index.$keycolor-darknavy-00;
+  line-height: 1;
+}
+a {
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+}
+.sp {
+  display: block;
+}
+.tab {
+  display: none;
+}
+.pc {
+  display: none;
+}
+.bold {
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 500;
+}
+.extra-bold {
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 700;
+}
+.autoalpha {
+  opacity: 0;
+}
+.mask {
+  &-xs {
+    width: 24px;
+    height: 24px;
+  }
+  &-s {
+    width: 32px;
+    height: 32px;
+  }
+  &-m {
+    width: 40px;
+    height: 40px;
+  }
+  &-l {
+    width: 64px;
+    height: 64px;
+  }
+  &_icon-insta {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: index.$acc-dwgray-00;
+    mask: url("../img/icon_insta.svg") no-repeat center center / contain;
+    -webkit-mask: url("../img/icon_insta.svg") no-repeat center center / contain;
+  }
+  &_icon-line {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: index.$acc-dwgray-00;
+    mask: url("../img/icon_line.svg") no-repeat center center / contain;
+    -webkit-mask: url("../img/icon_line.svg") no-repeat center center / contain;
+  }
+  &_icon-mail {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: index.$acc-dwgray-00;
+    mask: url("../img/icon_mail.svg") no-repeat center center / contain;
+    -webkit-mask: url("../img/icon_mail.svg") no-repeat center center / contain;
+  }
+  &_icon-phone {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: index.$acc-dwgray-00;
+    mask: url("../img/icon_phone.svg") no-repeat center center / contain;
+    -webkit-mask: url("../img/icon_phone.svg") no-repeat center center / contain;
+  }
+}
+
+@include m.mq(sp) {
+  body {
+    // background-size: 320px; /*--背景画像のサイズ--*/
+    // background-attachment: fixed; /*--背景画像の固定--*/
+    // background-repeat: no-repeat; /*--背景画像の繰り返し--*/
+    background-position: center center; /*--背景画像の位置--*/
+    background-image: url(../img/bgimg_icons.png);
+  }
+  .section_body {
+    font-size: index.$fs-s;
+    line-height: index.$lh-m;
+    text-align: justify;
+    margin: auto;
+  }
+}
+
+@include m.mq(tab) {
+  body {
+    // background-size: cover; /*--背景画像のサイズ--*/
+    background-attachment: fixed; /*--背景画像の固定--*/
+    // background-repeat: no-repeat; /*--背景画像の繰り返し--*/
+    background-position: center center; /*--背景画像の位置--*/
+    background-image: url(../img/bgimg_icons.png);
+  }
+  .section_body {
+    max-width: index.$maxvw-xs;
+    font-size: index.$fs-s;
+    line-height: index.$lh-m;
+    text-align: justify;
+  }
+}
+@include m.mq(pc) {
+  body {
+    // background-size: cover; /*--背景画像のサイズ--*/
+    background-attachment: fixed; /*--背景画像の固定--*/
+    // background-repeat: no-repeat; /*--背景画像の繰り返し--*/
+    background-position: center center; /*--背景画像の位置--*/
+    background-image: url(../img/bgimg_icons.png);
+  }
+
+  .section_body {
+    max-width: index.$maxvw-s;
+    font-size: index.$fs-m;
+    line-height: index.$lh-l;
+    text-align: justify;
+  }
+  main {
+    margin: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  a[href^="tel:"] {
+    pointer-events: none;
+  }
+}
+
+.recaptcha_credit {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 10px;
+  color: index.$acc-ngray-05;
+  max-width: 300px;
+  margin: auto;
+  p {
+    color: inherit;
+    font-size: inherit;
+    text-align: center;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    color: inherit;
+    font-size: inherit;
+    gap: 20px;
+    li {
+      color: inherit;
+      font-size: inherit;
+      a {
+        &:link,
+        &:visited {
+          color: inherit;
+          text-decoration: none;
+        }
+        &:hover {
+          color: inherit;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+}

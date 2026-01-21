@@ -1,0 +1,73 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/**************************************************** Slick */
+/************************************************************/
+.slider div {
+	text-align: center;
+	height: 300px;
+	width: 100%;
+	}
+.slider img {
+	width: 100%;
+	height: auto;
+	vertical-align:middle;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+.metaslider {
+	.caption-wrap {
+		.caption {
+			color: white;
+			font-size: index.$fs-s;
+		}
+	}
+}
+
+@include m.mq(pc) {
+    .slider div {
+        max-width: index.$maxvw-l;
+        margin: auto;
+        text-align: center;
+        height: 300px;
+        width: 100%;
+        border: solid 1px red;
+        }
+    .slider img {
+        width: 100%;
+        height: auto;
+        vertical-align:middle;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .metaslider {
+        margin-top: index.$spc-xl;
+        .caption-wrap {
+            .caption {
+                color: white;
+                font-size: index.$fs-l;
+                padding: index.$spc-s;
+            }
+        }
+    }
+}

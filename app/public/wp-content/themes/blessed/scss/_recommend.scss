@@ -1,0 +1,197 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/************************************************ recommend */
+/************************************************************/
+.recommend {
+    width: 100%;
+    padding: index.$spc-l;
+    &_wrapper {
+        max-width: index.$maxvw-m;
+        display: flex;
+        flex-direction: column;
+        gap: index.$spc-m;
+        margin: auto;
+        .recommend_itemlist {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-m;
+            margin: index.$spc-m auto;
+            &-item {
+                padding: 4px;
+                background: rgba(index.$r-beniaka, 0.3);
+                span {
+                    display: block;
+                    text-align: center;
+                    border: dashed 1px white;
+                    font-weight: bold;
+                    padding: index.$spc-s;
+                }
+            }
+        }
+        .pickup {
+            width: 100%;
+            max-width: 480px;
+            margin: auto;
+            &_itemlist {
+                display: flex;
+                flex-direction: column;
+                gap: index.$spc-m;
+                .item {
+                    a {
+                        display: flex;
+                        flex-direction: column;
+                        gap: index.$spc-m;
+                        .title {
+                            font-weight: bold;
+                            font-size: index.$fs-xl;
+                        }
+                        .thumbnail {
+                            width: 100%;
+                            aspect-ratio: 16/9;
+                            background: blue;
+                            overflow: hidden;
+                            img {
+                                position: relative;
+                                height: auto;
+                                width: 100%;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(tab){
+    .recommend {
+        width: 100%;
+        padding: index.$spc-xl 0 index.$spc-2xl;
+        &_wrapper {
+            max-width: index.$maxvw-m;
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-m;
+            margin: auto;
+            .recommend_itemlist {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: index.$spc-xl;
+                margin: index.$spc-m auto;
+                &-item {
+                    padding: 4px;
+                    background: rgba(index.$r-beniaka, 0.3);
+                    span {
+                        display: block;
+                        text-align: center;
+                        border: dashed 1px white;
+                        font-size: index.$fs-l;
+                        font-weight: bold;
+                        padding: index.$spc-s;
+                    }
+                }
+            }
+            .pickup {
+                width: 100%;
+                max-width: 480px;
+                margin: auto;
+                &_itemlist {
+                    display: flex;
+                    flex-direction: column;
+                    gap: index.$spc-m;
+                    .item {
+                        a {
+                            display: flex;
+                            flex-direction: column;
+                            gap: index.$spc-m;
+                            .title {
+                                font-weight: bold;
+                                font-size: index.$fs-xl;
+                            }
+                            .thumbnail {
+                                width: 100%;
+                                aspect-ratio: 16/9;
+                                background: blue;
+                                overflow: hidden;
+                                img {
+                                    position: relative;
+                                    height: auto;
+                                    width: 100%;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(pc) {
+    .recommend {
+        width: 100%;
+        padding: index.$spc-xl 0 index.$spc-2xl;
+        &_wrapper {
+            max-width: index.$maxvw-m;
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-m;
+            margin: auto;
+            .recommend_itemlist {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: index.$spc-xl;
+                margin: index.$spc-m auto;
+                &-item {
+                    padding: 4px;
+                    background: rgba(index.$r-beniaka, 0.3);
+                    span {
+                        display: block;
+                        text-align: center;
+                        border: dashed 1px white;
+                        font-size: index.$fs-l;
+                        font-weight: bold;
+                        padding: index.$spc-s;
+                    }
+                }
+            }
+            .pickup {
+                width: 100%;
+                max-width: 480px;
+                margin: auto;
+                &_itemlist {
+                    display: flex;
+                    flex-direction: column;
+                    gap: index.$spc-m;
+                    .item {
+                        a {
+                            display: flex;
+                            flex-direction: column;
+                            gap: index.$spc-m;
+                            .title {
+                                font-weight: bold;
+                                font-size: index.$fs-xl;
+                            }
+                            .thumbnail {
+                                width: 100%;
+                                aspect-ratio: 16/9;
+                                background: blue;
+                                overflow: hidden;
+                                img {
+                                    position: relative;
+                                    height: auto;
+                                    width: 100%;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

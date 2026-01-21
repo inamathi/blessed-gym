@@ -1,0 +1,59 @@
+@use "index";
+@use "mixin" as m;
+/************************************************************/
+/************************************************** archive */
+/************************************************************/
+.archive-title {
+    font-size: index.$fs-2xl;
+    padding-bottom: index.$spc-xs;
+    line-height: 1.6;
+    border-bottom: dotted 1px index.$b-usuhanada;
+}
+.archive_itemlist {
+    display: flex;
+    flex-direction: row;
+    .item {
+        padding: index.$spc-m;
+        max-width: 340px;
+        transition: all 0.3s ease;
+        &:hover {
+            background: rgba(index.$b-usuhanada, 0.2);
+            transition: all 0.3s ease;
+        }
+        a {
+            display: flex;
+            flex-direction: column;
+            gap: index.$spc-xs;
+            .date {
+                display: flex;
+                justify-content: flex-end;
+                font-size: index.$fs-s;
+                color: index.$acc-ngray-05;
+            }
+            .title {
+                font-size: index.$fs-l;
+            }
+            .tmb {
+                aspect-ratio: 16/9;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                }
+            }
+            .body {
+                font-size: index.$fs-s;
+                color: index.$acc-ngray-03;
+                line-height: 1.4;
+            }
+            .readmore {
+                width: 100%;
+                text-align: center;
+                padding: index.$spc-xs;
+                font-size: index.$fs-s;
+                border: solid 1px index.$acc-ngray-05;
+            }
+        }
+    }
+}
